@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anylytics Map</title>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+    <link href="/static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/anylytics.css"/>
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.png">
+
+</head>
+<body>
+    /* Navbar functionality here. Potentially moved into it's own Ractive */
+    <div id='head'>
+        <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="#"><img id="logo" src="/static/img/anylytics_logo.png"/></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#"><h5>Home</h5></a></li>
+                    <li><a href="#about"><h5>About</h5></a></li>
+                    <li><a href="#contact"><h5>Contact</h5></a></li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+              </div>
+            </nav>
+    </div>
+
+    <div id='mainarea' class='container-fluid'>
+        <div class='row'>
+            <div id='leftPanel' class='map col-sm-9'>
+                <div id='map' /> <!-- Container For Map Ractive -->
+                <div id='timeline'>
+                    <h1>Timeline Widget</h1>
+                </div>
+            </div>
+
+            <div id='rightPanel' class='sidebar col-sm-3'>
+                <div class='heading'>
+                    <h1>Stories</h1>
+                </div>
+                <div id='listings2' class='listings'>
+                    <div class='item'>
+                        <a class='title'>Adnan Says ...</a>
+                        <div>He was at the library</div>
+                    </div>
+                    <div class='item'>
+                        <a class='title'>Jay Says ...</a>
+                        <div>Adnan was at the Best Buy</div>
+                    </div>
+                </div>
+                <div class='heading'>
+                    <h1>Tower Locations</h1>
+                </div>
+                <div id='listings' class='listings'></div>
+
+            </div>
+        </div>
+    </div>
+
+     <!-- RequireJS means we use this plugin to load everything else! -->
+     <!-- See main.js -->
+    <script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
+
+
+
+</body>
+</html>
