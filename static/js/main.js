@@ -9,7 +9,7 @@ require.config({
 });
 
 // Now we've configured RequireJS, we can load our dependencies and start
-require([ 'ractive', 'rv!../ractive/map' ], function ( Ractive, mapTemplate ) {
+require([ 'ractive'], function ( Ractive) {
 
     var mapRactive = new Ractive({
       // The `el` option can be a node, an ID, or a CSS selector.
@@ -17,7 +17,7 @@ require([ 'ractive', 'rv!../ractive/map' ], function ( Ractive, mapTemplate ) {
 
       // We could pass in a string, but for the sake of convenience
       // we're passing the ID of the <script> tag above.
-      template: mapTemplate,
+      template: "",
 
       // Here, we're passing in some initial data
       data: { }
@@ -26,3 +26,4 @@ require([ 'ractive', 'rv!../ractive/map' ], function ( Ractive, mapTemplate ) {
 });
 
 require(['mapbox', "serial"]);
+require(['temperatures']);
