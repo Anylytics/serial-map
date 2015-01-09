@@ -55,7 +55,7 @@ var tempRactive = new Ractive({
       return high.concat( low.reverse() ).join( ' ' );
     },
 
-    monthNames: [ 'J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D' ]
+    hourNames: [ '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm' ]
   }
 });
 
@@ -84,7 +84,8 @@ tempRactive.observe({
   },
   height: function ( height ) {
     this.set( 'yScale', linearScale([ -10, 42 ], [ height - 20, 25 ]) );
-  }
+    this.set( 'yPlane', linearScale([ 0, 100 ], [height, 0]) );
+  },
 });
 
 // update width and height when window resizes

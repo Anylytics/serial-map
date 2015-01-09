@@ -2,20 +2,20 @@
 
   <!-- header and options -->
   <div class='chart-header'>
-    <h3>Average high and low temperature</h3>
+    <h3>Timeline</h3>
 
-    <!-- switch between celsius and fahrenheit -->
+    <!-- switch between celsius and fahrenheit
     <div class='radio-group'>
       <label>°C <input type='radio' name='{{degreeType}}' value='celsius' checked></label>
       <label>°F <input type='radio' name='{{degreeType}}' value='fahrenheit'></label>
-    </div>
+    </div> -->
 
-    <!-- dropdown menu -->
+    <!-- dropdown menu
     <select value='{{selected}}'>
       {{#cities:i}}
       <option value='{{i}}'>{{name}}</option>
       {{/cities}}
-    </select>
+    </select> -->
   </div>
 
   <!-- the chart -->
@@ -31,12 +31,27 @@
           </linearGradient>
         </defs>
 
-        <!-- horizontal line representing freezing -->
-        <g transform='translate( 0, {{ yScale(0) }} )'>
-          <line class='freezing' x2='{{width}}'/>
-          <text class='freezing-label-bg' x='{{ xScale(6) }}' y='0.3em'>freezing</text>
-          <text class='freezing-label' x='{{ xScale(6) }}' y='0.3em'>freezing</text>
+        <g transform='translate( 0,  0 )'>
+          <text class='freezing-label-bg' x='{{ xScale(.2) }}' y='{{yPlane(10)}}'>Adnan</text>
+          <text class='freezing-label' x='{{ xScale(.2) }}' y='{{yPlane(10)}}'>Adnan</text>
         </g>
+
+
+        <!-- horizontal line representing top -->
+        <g transform='translate( 0,  0 )'>
+          <line class='freezing' x2='{{width}}'/>
+          <text class='freezing-label-bg' x='{{ xScale(6) }}' y='0.3em'>top</text>
+          <text class='freezing-label' x='{{ xScale(6) }}' y='0.3em'>top</text>
+        </g>
+
+        <!-- horizontal line representing bottom -->
+        <g transform='translate( 0,  {{ height }} )'>
+          <line class='freezing' x2='{{width}}'/>
+          <text class='freezing-label-bg' x='{{ xScale(6) }}' y='0.3em'>bottom</text>
+          <text class='freezing-label' x='{{ xScale(6) }}' y='0.3em'>bottom</text>
+        </g>
+
+
 
         {{#selectedCity}}
 
@@ -61,9 +76,9 @@
     </div>
 
     <div class='month-labels'>
-      {{#monthNames:i}}
-        <span style='width: {{ 100 / monthNames.length }}%;'>{{ monthNames[i] }}</span>
-      {{/monthNames}}
+      {{#hourNames:i}}
+        <span style='width: {{ 100 / hourNames.length }}%;'>{{ hourNames[i] }}</span>
+      {{/hourNames}}
     </div>
   </div>
 </div>

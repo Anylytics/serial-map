@@ -13,7 +13,7 @@ svg {
     position: relative;
     width: 100%;
     height: 20em;
-    padding: 1em 0 0 0;
+    padding: 0 0 0 0;
     background-color: #fafafa;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -21,12 +21,11 @@ svg {
 }
 
 .chart-header {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 2em;
-    padding: 0.5em;
+    height: 1em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -42,6 +41,7 @@ svg {
 .chart-header h3 {
     font-family: 'Voltaire';
     font-weight: normal;
+    font-size: 14px;
     float: left;
     margin: 0;
     border: none;
@@ -122,7 +122,8 @@ svg {
 .month-labels {
     position: absolute;
     left: 0;
-    bottom: 1em;
+    height: 2em;
+    bottom: 0em;
     width: 100%;
 }
 
