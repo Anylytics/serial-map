@@ -11,6 +11,7 @@
     <!--<link rel="stylesheet" href="/static/css/temperature.css"/>-->
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.png">
 
+
 </head>
 <body>
     <div id='head'>
@@ -41,7 +42,8 @@
             </div>
     </div>-->
 
-    <div id='rightPanel' class='sidebar hidden-xs'>
+    <div id='rightPanel' class='sidebar hidden-xs floatPanel'>
+        <div id='contents'>
                 <div class='heading'>
                     <h3 id="marginfix">Stories</h3>
                 </div>
@@ -59,6 +61,7 @@
                     <h3>Tower Locations</h3>
                 </div>
                 <div id='listings' class='listings'></div>
+        </div>
     </div>
 
     <!--<footer class = 'visible-lg-inline largeTimeline'>
@@ -72,17 +75,55 @@
            </div>
     </footer>-->
 
-    <div id="timelineContainer">
-        <div id="timeline"></div>
+    <div id="timelineContainer" class="floatPanel">
+        <!--<div id="timeline"></div>-->
+        <table class="timeline table-hover" id="leftLabels">
+            <tr>
+                <th>Calls</th>
+                <td></td>
+                <td></td>
+                <td><div class="timeElement"><div id="call_305PM" class="eventContainer"><img class="eventIcon" src="/static/img/callout.png"/></div><div id="call_327PM" class="eventContainer"><img class="eventIcon" src="/static/img/callin.png"/></div></div></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Adnan</th>
+                <td><div class="timeElement"><div id="call_107PM" class="eventContainer"><img class="eventIcon" src="/static/img/adnan.png"/></div></div></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><div class="timeElement"><div id="call_305PM" class="eventContainer"><img class="eventIcon" src="/static/img/adnan.png"/></div><div id="call_327PM" class="eventContainer"><img class="eventIcon" src="/static/img/adnan.png"/></div></div></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Jay</th>
+                <td></td>
+                <td></td>
+                <td><div class="timeElement"><div id="call_305PM" class="eventContainer"><img class="eventIcon" src="/static/img/jay1.png"/></div></div></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="timeLabels">
+                <th>Time</th>
+                <td>1PM</td>
+                <td>2PM</td>
+                <td>3PM</td>
+                <td>4PM</td>
+                <td>5PM</td>
+                <td>6PM</td>
+            </tr>
+        </table>
     </div>
 
 
     </div>
+  
 
      <!-- RequireJS means we use this plugin to load everything else! -->
      <!-- See main.js -->
     <script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <script>
         var mapElement = document.getElementById("map");

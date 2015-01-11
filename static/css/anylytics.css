@@ -91,8 +91,8 @@ a:hover {
 .navbar {
 	border-color:#54A148;
 	border-bottom-style:solid;
-	border-bottom-width:2px;
-	box-shadow: 0px 1px 1px #888888;
+	//border-bottom-width:2px;
+	box-shadow: 1px 1px 4px #888888;
 }
 
 /******* CONTENT ********/
@@ -105,18 +105,22 @@ a:hover {
 #rightPanel {
 	position:fixed;
 	right:1.5%;
-	top:10%;
+	top:12.5%;
 	padding:10px;
 	width:20%;
 	height:70%;
-	background-color:whitesmoke;
+	overflow:auto;
+}
+
+.floatPanel {
+	background:url(/static/img/whitesmoke.png);
 	border-radius:5px;
-	border-style:solid;
+	//border-style:solid;
 	border-color:#54A148;
 	border-width:2px;
-	overflow:auto;
-	box-shadow: 1px 1px 1px #888888;
+	box-shadow: 1px 1px 4px #888888;
 }
+
 
 #listings2 {
 	height:40%;
@@ -163,10 +167,24 @@ h1 {
 
 .listings .item {
   display:block;
-  border-bottom:1px solid #eee;
+  width:90%;
+  margin-left:5%;
+  //border:1px solid #eee;
   padding:10px;
   text-decoration:none;
+  border-style:solid;
+  border-color:darkgrey;
+  border-width:1px;
+  background-color:whitesmoke;
+  margin-top:5px;
+  margin-bottom:5px;
+  box-shadow: 1px 1px 1px #888888;
 }
+
+.listings .item:hover {
+	background-color:white;	
+}
+
 .listings .item:last-child { border-bottom:none; }
 .listings .item .title {
   display:block;
@@ -182,20 +200,15 @@ h1 {
 
 
 #timelineContainer {
-	background-color:whitesmoke;
-	border-color:#54A148;
-	border-style:solid;
-	border-radius:5px;
-	border-width:2px;
 	position:fixed;
 	bottom: 20px;
 	width:97%;
 	margin-left: 1.5%;
 	height:12%;
-	min-height:30px;
+	min-height:85px;
 	padding-left:10px;
-	box-shadow: 1px 1px 1px #888888;
 }
+
 
 .month-labels {
     position: absolute;
@@ -223,7 +236,60 @@ h1 {
 	padding: 5px;
 }
 
-table {
-	border-style:solid;
+table.timeline, th, td {
+  // border: 1px solid black;	
+
+	border-right-style:solid;
+	border-right-width:1px;
+	border-right-color:lightgrey;
+   padding-left:2px;
+   padding-right:2px;	
 }
 
+table tr#timelabels td {
+	text-align:center;
+}
+
+table th {
+	//background-color: lightsteelblue;
+	font-weight:normal;
+	padding-right:10px;
+}
+
+table.timeline {
+	height:100%;
+}
+
+table tr#timeLabels td {
+	text-align:center;
+	min-width:45px;
+}
+
+img.eventIcon {
+	height:20px;
+}
+
+div.eventContainer {
+	//display:inline;
+	position:absolute;
+	margin-top:-12px;
+}
+
+div.timeElement {
+	position:relative;
+}
+
+div#call_305PM{
+	z-index:1505;
+	left:8.33%;
+}
+
+div#call_327PM{
+	z-index:1527;
+	left:45%;
+}
+
+div#call_107PM {
+	z-index:1307;
+	left:10%;
+}
