@@ -6,7 +6,7 @@ require(
     ],
     function(mapbox, geojson)
 {
-
+console.log(geojson);
 L.mapbox.accessToken = 'pk.eyJ1IjoiZ3VpbHR5c3BhcmsiLCJhIjoiNkNReWgtMCJ9.-fHLc9ig1AQz7ta9oE6vzg';
 var map = L.mapbox.map('map', 'guiltyspark.kl48ij2n', {
 zoomControl: false })
