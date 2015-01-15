@@ -1,6 +1,21 @@
  <table class="timeline table table-hover" id="leftLabels">
     <tr>
         <th>Calls</th>
+    </tr>
+    <tr>
+        <th>Adnan</th>
+    </tr>
+    <tr>
+        <th>Jay</th>
+    </tr>
+    <tr >
+        <th>Time</th>
+    </tr>
+</table>
+
+
+<table class="timeline table" id="rightContent">
+    <tr>
         {{#hourNames:i}}
             <td>
                 {{ #calls[hourNames[i]] }}
@@ -20,7 +35,6 @@
         <td></td>-->
     </tr>
     <tr>
-        <th>Adnan</th>
         <td><div class="timeElement"><div id="call_107PM" class="eventContainer"><img class="eventIcon" src="/static/img/adnan.png"/></div></div></td>
         <td></td>
         <td></td>
@@ -29,7 +43,6 @@
         <td></td>
     </tr>
     <tr>
-        <th>Jay</th>
         <td></td>
         <td></td>
         <td><div class="timeElement"><div id="call_305PM" class="eventContainer"><img class="eventIcon" src="/static/img/jay1.png"/></div></div></td>
@@ -38,12 +51,10 @@
         <td></td>
     </tr>
     <tr id="timeLabels">
-        <th>Time</th>
-        <td>1PM</td>
-        <td>2PM</td>
-        <td>3PM</td>
-        <td>4PM</td>
-        <td>5PM</td>
-        <td>6PM</td>
+        {{#hourNames:i}}
+            <td>{{hourNames[i]}}</td>
+        {{/hourNames}}
+            
     </tr>
+       
 </table>

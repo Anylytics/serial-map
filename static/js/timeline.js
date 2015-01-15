@@ -6,7 +6,7 @@ require([ 'ractive', 'rv!../ractive/timeline', 'calldata'], function ( Ractive, 
       template: template,
       data: {
         calls: call_d["13/01/99"],
-        hourNames: [ '13', '14', '15', '16', '17', '18'],
+        hourNames: [ '13', '14', '15', '16', '17', '18','19','20','21','22','23','24'],
         date: "13/01/99",
         percentage: function ( minutes ) {
             return minutes/60.0 * 100;
