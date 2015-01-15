@@ -182,7 +182,7 @@ h1 {
 }
 
 .listings .item:hover {
-	background-color:white;	
+  background-color:white;
 }
 
 .listings .item:last-child { border-bottom:none; }
