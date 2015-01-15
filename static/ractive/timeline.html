@@ -1,0 +1,49 @@
+ <table class="timeline table table-hover" id="leftLabels">
+    <tr>
+        <th>Calls</th>
+        {{#hourNames:i}}
+            <td>
+                {{ #calls[hourNames[i]] }}
+                    <div class="timeElement">
+                        <div class="eventContainer" style="z-index:{{hour}}{{minute}}; left:{{percentage(minute)}}%;">
+                            <img class="eventIcon" src="/static/img/callout.png"/>
+                        </div>
+                    </div>
+                {{/calls}}
+            </td>
+        {{/hourNames}}
+        <!--<td></td>
+        <td></td>
+        <td><div class="timeElement"><div id="call_305PM" class="eventContainer"><img class="eventIcon" src="/static/img/callout.png"/></div><div id="call_327PM" class="eventContainer"><img class="eventIcon" src="/static/img/callin.png"/></div></div></td>
+        <td></td>
+        <td></td>
+        <td></td>-->
+    </tr>
+    <tr>
+        <th>Adnan</th>
+        <td><div class="timeElement"><div id="call_107PM" class="eventContainer"><img class="eventIcon" src="/static/img/adnan.png"/></div></div></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><div class="timeElement"><div id="call_305PM" class="eventContainer"><img class="eventIcon" src="/static/img/adnan.png"/></div><div id="call_327PM" class="eventContainer"><img class="eventIcon" src="/static/img/adnan.png"/></div></div></td>
+        <td></td>
+    </tr>
+    <tr>
+        <th>Jay</th>
+        <td></td>
+        <td></td>
+        <td><div class="timeElement"><div id="call_305PM" class="eventContainer"><img class="eventIcon" src="/static/img/jay1.png"/></div></div></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr id="timeLabels">
+        <th>Time</th>
+        <td>1PM</td>
+        <td>2PM</td>
+        <td>3PM</td>
+        <td>4PM</td>
+        <td>5PM</td>
+        <td>6PM</td>
+    </tr>
+</table>
