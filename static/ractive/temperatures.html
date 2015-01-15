@@ -1,11 +1,13 @@
+<div id="timelineContainer" class="floatPanel">
+
 <div class='temperatures'>
 
   <!-- header and options -->
-  
+
 
   <!-- the chart -->
    <!--<div class='chart'>
-   <div id='svg_wrapper'>  needed to determine size of SVG element in Firefox 
+   <div id='svg_wrapper'>  needed to determine size of SVG element in Firefox
       <svg id='svg'>-->
 
         <!-- gradient - higher temperatures are redder, lower temperatures are bluer -->
@@ -22,14 +24,14 @@
         </g>-->
 
 
-        <!-- horizontal line representing top 
+        <!-- horizontal line representing top
         <g transform='translate( 0,  0 )'>
           <line class='freezing' x2='{{width}}'/>
           <text class='freezing-label-bg' x='{{ xScale(6) }}' y='0.3em'>top</text>
           <text class='freezing-label' x='{{ xScale(6) }}' y='0.3em'>top</text>
         </g>-->
 
-        <!-- horizontal line representing bottom 
+        <!-- horizontal line representing bottom
         <g transform='translate( 0,  {{ height }} )'>
           <line class='freezing' x2='{{width}}'/>
           <text class='freezing-label-bg' x='{{ xScale(6) }}' y='0.3em'>bottom</text>
@@ -40,11 +42,11 @@
 
         <!--{{#selectedCity}}-->
 
-          <!-- the band 
+          <!-- the band
           <polygon fill='url(#gradient)' stroke='url(#gradient)' class='temperature-band' points='{{ band(months) }}'/>
 
           {{#months:i}}-->
-            <!-- point markers for average highs 
+            <!-- point markers for average highs
             <g class='marker' transform='translate({{ xScale(i+0.5) }},{{ yScale(high) }})'>
               <circle r='2'/>
               <text y='-10'>{{ format(high) }}</text>
@@ -75,4 +77,6 @@
       {{/hourNames}}
     </div>
   </div>
+</div>
+
 </div>
