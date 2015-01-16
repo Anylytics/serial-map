@@ -20,7 +20,7 @@ var mapDictionary = {}
 
 var locations = L.mapbox.featureLayer().addTo(map);
 locations.setGeoJSON(geojson);
-var listings = document.getElementById('listings');
+//var listings = document.getElementById('listings');
 locations.eachLayer(function(locale) {
   // Shorten locale.feature.properties to just `prop` so we're not
   // writing this long form over and over again.
@@ -29,44 +29,30 @@ locations.eachLayer(function(locale) {
   //Add each tower to the map dictionary
   mapDictionary[prop.name] = locale;
 
-  var listing = listings.appendChild(document.createElement('div'));
-  listing.className = 'item';
+  //var listing = listings.appendChild(document.createElement('div'));
+  //listing.className = 'item';
 
-  var link = listing.appendChild(document.createElement('a'));
+  //var link = listing.appendChild(document.createElement('a'));
   //link.href = '#';
-  link.className = 'title';
-  link.innerHTML = prop.name;
+  //link.className = 'title';
+  //link.innerHTML = prop.name;
 
-  if (prop.crossStreet) {
-      link.innerHTML += ' <br /><small>' + prop.crossStreet + '</small>';
-  }
+  //var details = listing.appendChild(document.createElement('div'));
+  //details.innerHTML = prop.city;
 
-  var details = listing.appendChild(document.createElement('div'));
-  details.innerHTML = prop.city;
-
-  if (prop.phone) {
-      details.innerHTML += ' &middot; ' + prop.phoneFormatted;
-  }
-
-  link.onclick = function() {
+  /*link.onclick = function() {
       // 1. Toggle an active class for `listing`. View the source in the demo link for example.
 
       // 2. When a menu item is clicked, animate the map to center
       // its associated locale and open its popup.
       //map.setView(locale.getLatLng(), 14);
       locale.openPopup();
-  };
+  };*/
   locale.on('click', function() {
       // 1. Toggle an active class for `listing`. View the source in the demo link for example.
 
       // 2. center the map on the selected marker.
       //map.setView(locale.getLatLng(), 14);
-      locale.setIcon(L.icon({
-        iconUrl: '/static/img/cellactive.gif',
-        iconSize: [21.5, 32.5],
-        iconAnchor: [0, 0],
-        popupAnchor: [0, 0]
-      }));
   });
   var popup =  prop.name;
   //locale.bindPopup(popup);

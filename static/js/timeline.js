@@ -1,5 +1,5 @@
 // Now we've configured RequireJS, we can load our dependencies and start
-require([ 'ractive', 'rv!../ractive/timeline', 'calldata', 'serial'], function ( Ractive, template, call_d, mapdictionary) {
+require([ 'ractive', 'rv!../ractive/timeline', 'calldata', 'serial', 'sidebar'], function ( Ractive, template, call_d, mapdictionary, sidebar) {
 
     var timelineRactive = new Ractive({
       el: 'timelineContainer',
@@ -34,7 +34,7 @@ require([ 'ractive', 'rv!../ractive/timeline', 'calldata', 'serial'], function (
         {
             var locale = mapdictionary[id];
             locale.setIcon(L.icon({
-                iconUrl: '/static/img/cellactive.gif',
+                iconUrl: '/static/img/cellActive.png',
                 iconSize: [21.5, 32.5],
                 iconAnchor: [0, 0],
                 popupAnchor: [0, 0]
