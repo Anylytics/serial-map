@@ -16,7 +16,7 @@ var geojson = [
             },
             "properties": {
               "city": "Baltimore",
-              "name": "Cell Tower (L602)"
+              "name": "L602"
             }
           },
           {
@@ -30,7 +30,7 @@ var geojson = [
             },
             "properties": {
               "city": "Baltimore",
-              "name": "Cell Tower (L608)"
+              "name": "L608"
             }
           },
           {
@@ -44,7 +44,7 @@ var geojson = [
             },
             "properties": {
               "city": "Baltimore",
-              "name": "Cell Tower (L651)"
+              "name": "L651"
             }
           },
           {
@@ -58,7 +58,7 @@ var geojson = [
             },
             "properties": {
               "city": "Baltimore",
-              "name": "Cell Tower (L652)"
+              "name": "L652"
             }
           },
           {
@@ -72,7 +72,7 @@ var geojson = [
             },
             "properties": {
               "city": "Baltimore",
-              "name": "Cell Tower (L653)"
+              "name": "L653"
             }
           },
           {
@@ -86,7 +86,7 @@ var geojson = [
             },
             "properties": {
               "city": "Baltimore",
-              "name": "Cell Tower (L654)"
+              "name": "L654"
             }
           },
           {
@@ -100,7 +100,7 @@ var geojson = [
             },
             "properties": {
               "city": "Baltimore",
-              "name": "Cell Tower (L655)"
+              "name": "L655"
             }
           },
           {
@@ -114,7 +114,7 @@ var geojson = [
             },
             "properties": {
               "city": "Baltimore",
-              "name": "Cell Tower (L688)"
+              "name": "L688"
             }
           },
           {
@@ -128,7 +128,7 @@ var geojson = [
             },
             "properties": {
               "city": "Baltimore",
-              "name": "Cell Tower (L689)"
+              "name": "L689"
             }
           },
           {
@@ -142,7 +142,7 @@ var geojson = [
             },
             "properties": {
               "city": "Baltimore",
-              "name": "Cell Tower (L698)"
+              "name": "L698"
             }
           }
 

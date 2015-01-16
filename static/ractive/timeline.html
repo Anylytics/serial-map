@@ -6,7 +6,7 @@
                 {{ #calls[hourNames[i]] }}
                     <div class="timeElement">
                         <div class="eventContainer" style="z-index:{{hour}}{{minute}}; left:{{percentage(minute)}}%;">
-                            <img class="eventIcon" src="/static/img/callout.png"/>
+                            <img on-click='activate:{{tower}}' class="eventIcon" src="/static/img/callout.png"/>
                         </div>
                     </div>
                 {{/calls}}
