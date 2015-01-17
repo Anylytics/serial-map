@@ -8,14 +8,19 @@
     <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
     <link href="/static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/anylytics.css"/>
+    <link rel="stylesheet" href="/static/css/animate.css"/>
     <!--<link rel="stylesheet" href="/static/css/temperature.css"/>-->
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.png">
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+
 
 
 </head>
 <body>
-    <div id='head'>
-        <nav class="navbar navbar-default navbar-fixed-top">
+    <div id='head' class="animated fadeInDown">
+        <!--<nav class="navbar navbar-default navbar-fixed-top">
               <div class="container">
                 <div class="navbar-header">
                   <a class="navbar-brand hidden-xs" href="#"><img id="logo" src="/static/img/anylytics_logo.png"/></a>
@@ -27,22 +32,29 @@
                     <li><a href="#about"><h5>About</h5></a></li>
                     <li><a href="#contact"><h5>Contact</h5></a></li>
                   </ul>
-                </div><!--/.nav-collapse -->
+                </div><!--/.nav-collapse 
               </div>
-            </nav>
+            </nav>-->
+            <a class="navbar-brand hidden-xs" href="http://anylytics.io"><img id="logo" src="/static/img/anylytics_logo.png"/></a>
+            <a class="navbar-brand visible-xs-inline animated fadeInDown"  href="http://anylytics.io"><img id="logoxs" src="/static/img/anylytics_small_logo.png"/></a>
+
+            <a class="navbar-brand" href="#"><img id="legendButton" class="headButton" src="/static/img/legendIcon.png"/></a>
+            <a class="navbar-brand" href="#"><img id="timeButton" class="headButton" src="/static/img/time.png"/></a>
+            <a class="navbar-brand" href="#"><img id="storyButton" class="headButton" src="/static/img/stories.png"/></a>
+
     </div>
 
     <div id='mainarea'>
         <div id='map'> </div>
 
 
-        <div id='rightPanel' class='sidebar hidden-xs floatPanel'>
+        <div id='rightPanel' class='sidebar hidden-xs floatPanel animated fadeInRight'>
             <div id='contents'>
                     <div class='heading'>
                         <h3 id="marginfix">Stories</h3>
                     </div>
                     <div id='listings2' class='listings'>
-                        <div class='item'>
+                        <div class='item' id='draggable'>
                             <a class='title'>Adnan Says ...</a>
                             <div>He was at the library</div>
                         </div>
@@ -58,7 +70,11 @@
             </div>
         </div>
 
-        <div id="timelineContainer" class="floatPanel">
+        <div class="floatPanel offScreen animated fadeInLeft" id="legend">
+            <img id="legendImg" src="/static/img/legend.png">
+        </div>
+
+        <div id="timelineContainer" class="timelineContainer floatPanel animated fadeInUp">
             <!-- Ractive Will Fill This In -->
         </div>
 
@@ -68,8 +84,39 @@
 
      <!-- RequireJS means we use this plugin to load everything else! -->
      <!-- See main.js -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $( "#legendButton" ).click(function() {
+            if ($( "#legend" ).hasClass( "offScreen" )) {
+                $( "#legend" ).removeClass("offScreen animated fadeOutLeft");
+                $( "#legend" ).addClass("animated fadeInLeft");
+            } else {
+                $( "#legend" ).removeClass("animated fadeInLeft");
+                $( "#legend" ).addClass("animated fadeOutLeft").delay(1000).addClass("offScreen");
+            }
+        });
 
+
+        $( "#timeButton" ).click(function() {
+            if ($( "#timelineContainer" ).hasClass( "offScreen" )) {
+                $( "#timelineContainer" ).removeClass("offScreen animated fadeOutDown");
+                $( "#timelineContainer" ).addClass("animated fadeInUp");
+            } else {
+                $( "#timelineContainer" ).removeClass("animated fadeInUp");
+                $( "#timelineContainer" ).addClass("animated fadeOutDown").delay(1000).addClass("offScreen");
+            }
+        });
+
+        $( "#storyButton" ).click(function() {
+            if ($( "#rightPanel" ).hasClass( "offScreen" )) {
+                $( "#rightPanel" ).removeClass("offScreen animated fadeOutRight");
+                $( "#rightPanel" ).addClass("animated fadeInRight");
+            } else {
+                $( "#rightPanel" ).removeClass("animated fadeInRight");
+                $( "#rightPanel" ).addClass("animated fadeOutRight").delay(1000).addClass("offScreen");
+            }
+        });
+    </script>
 </body>
 </html>
