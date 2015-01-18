@@ -262,37 +262,6 @@ h1 {
 	//min-height:85px;
 }
 
-table.timeline#leftLabels, th#leftLabels, td#leftLabels {
-	border-right-style:solid;
-	border-right-width:1px;
-	border-right-color:lightgrey;
-    padding-left:2px;
-    padding-right:2px;
-}
-
-
-
-
-table th {
-	font-weight:normal;
-	padding-right:10px;
-}
-
-table.timeline {
-	height:100%;
-	display:inline-block;
-	table-layout: fixed;
-}
-
-table tr#timeLabels td {
-	text-align:center;
-	width:250px;
-}
-
-table.timeline > tr {
-	height:30px;
-	width:auto;
-}
 
 
 #leftLabels {
