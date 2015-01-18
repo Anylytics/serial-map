@@ -85,8 +85,13 @@ a:hover {
 	opacity:.8;
 }
 
-#legendButton:hover {
+.headButton:hover {
 	opacity: 1;
+}
+
+.headButtonActive {
+	height:36px;
+	padding-top:3px;
 }
 
 #logoxs {
