@@ -9,7 +9,7 @@ define(
 console.log("STARTING");
 L.mapbox.accessToken = 'pk.eyJ1IjoiZ3VpbHR5c3BhcmsiLCJhIjoiNkNReWgtMCJ9.-fHLc9ig1AQz7ta9oE6vzg';
 var map = L.mapbox.map('map', 'guiltyspark.kl48ij2n', {
-zoomControl: false })
+zoomControl: true })
 .setView([39.292222,-76.686667], 13);
 
 ///DEFINE RACTIVE////
@@ -63,7 +63,7 @@ locations.eachLayer(function(locale) {
   var popup =  prop.name;
   locale.bindPopup(popup);
   locale.setIcon(L.icon({
-    iconUrl: '/static/img/'+prop.icon+'.png',
+    iconUrl: '/static/img/'+prop.icon+'_t.png',
     iconSize: [75, 75],
     iconAnchor: [37, 73],
     popupAnchor: [0, -35]
@@ -71,15 +71,15 @@ locations.eachLayer(function(locale) {
 });
 
 // Disable drag and zoom handlers.
-map.dragging.disable();
+/*map.dragging.disable();
 map.touchZoom.disable();
 map.doubleClickZoom.disable();
-map.scrollWheelZoom.disable();
+map.scrollWheelZoom.disable();*/
 
 // Disable tap handler, if present.
 if (map.tap)
 {
-  map.tap.disable();
+  //map.tap.disable();
 }
 
 return mapDictionary;

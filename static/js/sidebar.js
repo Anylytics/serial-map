@@ -10,6 +10,41 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial'], function ( Ractive, temp
       },
     });
 
+    sidebarRactive.observe( 'stories', function ( newValue, oldValue, keypath ) {
+        if (oldValue != undefined)
+        {
+            for (var item in oldValue)
+            {
+                if (oldValue[item]["geo"] in mapdictionary)
+                {
+                    var locale = mapdictionary[oldValue[item]["geo"]];
+                    var prop = locale.feature.properties;
+                    locale.setIcon(L.icon({
+                        iconUrl: '/static/img/'+prop.icon+'_t.png',
+                        iconSize: [75, 75],
+                        iconAnchor: [37, 75],
+                        popupAnchor: [0, -35]
+                    }));
+                }
+            }
+        }
+        for (var item in newValue)
+        {
+            if (newValue[item]["geo"] in mapdictionary)
+            {
+                var locale = mapdictionary[newValue[item]["geo"]];
+                var prop = locale.feature.properties;
+                locale.setIcon(L.icon({
+                    iconUrl: '/static/img/'+prop.icon+'.png',
+                    iconSize: [75, 75],
+                    iconAnchor: [37, 75],
+                    popupAnchor: [0, -35]
+                }));
+            }
+        }
+
+    });
+
     sidebarRactive.on( 'open_feature', function( event, feature_name )  {
         prev = sidebarRactive.get('prev');
         if (prev != undefined)
