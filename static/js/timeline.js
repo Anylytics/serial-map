@@ -13,10 +13,18 @@ require([ 'ractive', 'rv!../ractive/timeline', 'storydata', 'serial', 'sidebar']
       el: 'timelineContainer',
       template: template,
       data: {
-        hourNames: [ '13', '14', '15', '16', '17', '18','19','20','21','22','23','24'],
+        hourNames: [ '8','9','10','11','12','13', '14', '15', '16', '17', '18','19','20','21','22','23','24'],
         date: "13/01/99",
         percentage: function ( minutes ) {
             return minutes/60.0 * 100;
+        }, 
+        time: function ( hour ) {
+            if (hour>12){
+                hour=hour-12;
+                return hour + "PM";
+            } else {
+                return hour + "AM";
+            }
         }
       },
     });

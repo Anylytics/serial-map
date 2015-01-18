@@ -5,7 +5,8 @@ require.config({
         ractive: 'lib/ractive',
         rv: 'loaders/rv',
         mapbox: 'lib/mapbox',
-        jquery: 'lib/jquery-1.11'
+        jquery: 'lib/jquery-1.11',
+        jqueryui: 'lib/jquery_ui'
     }
 });
 
@@ -28,4 +29,5 @@ require([ 'ractive'], function ( Ractive) {
 
 require(['mapbox', "serial"]);
 //require(['temperatures']);
-require(['sidebar', 'timeline', "uibuttons" ]);
+require(['sidebar', 'timeline' ]);
+require(["uibuttons"]);
