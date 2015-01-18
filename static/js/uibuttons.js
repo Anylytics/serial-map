@@ -1,4 +1,4 @@
-require([ 'ractive', 'rv!../ractive/uibuttons', "jquery"], function ( Ractive, template) {
+require([ 'ractive', 'rv!../ractive/uibuttons', "jquery", "jqueryui"], function ( Ractive, template, jquery, jquerymin) {
 
         $( "#legendButton" ).click(function() {
             if ($( "#legend" ).hasClass( "offScreen" )) {
@@ -30,4 +30,7 @@ require([ 'ractive', 'rv!../ractive/uibuttons', "jquery"], function ( Ractive, t
                 $( "#rightPanel" ).addClass("animated fadeOutRight").delay(1000).addClass("offScreen");
             }
         });
+
+         $( ".draggable" ).draggable({ cursor: "move", axis: "x" });
+          
 });

@@ -1,12 +1,12 @@
 
 <div id="leftLabels">
-    <div class="stackable">Calls</div>
-    <div class="stackable">Adnan</div>
-    <div class="stackable">Jay</div>
-    <div class="stackable">Time</div>
+    <div class="stackable leftTitles">Calls</div>
+    <div class="stackable leftTitles">Adnan</div>
+    <div class="stackable leftTitles">Jay</div>
+    <div class="stackable leftTitles">Time</div>
 </div>
-<div id = "rightContent">
-    <div id = "timelinewrapper">
+<div id = "rightContent" >
+    <div id = "timelinewrapper" class="draggable">
      {{#hourNames:i}}
         <div class="hourcolumn" on-click='activate:{{this}}'>
             {{#stories}}
@@ -14,14 +14,14 @@
                  {{ #this[hourNames[i]] }}
                         <div class="timeElement">
                             <div class="eventContainer" style="z-index:{{hour}}{{minute}}; left:{{percentage(minute)}}%;">
-                                <img class="eventIcon" id="draggable" src="/static/img/{{icon}}.png"/>
+                                <img class="eventIcon" src="/static/img/{{icon}}.png"/>
                             </div>
                         </div>
                  {{/calls}}
                 </div>
             {{/stories}}
             <div class="stackable">
-                {{this}}
+                {{time(this)}}
             </div>
         </div>
      {{/hourNames}}
