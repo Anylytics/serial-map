@@ -1,5 +1,10 @@
 define([], function() {
 
+var nothing =
+{
+  '13/01/99': {}
+};
+
 var adnan =
 {
   '13/01/99': {
@@ -28,16 +33,17 @@ var adnan =
         'minute': '45',
         'duration': '10:45am',
         'body': 'Adnan calls Jay and offers to lend him his car.',
-        'icon': "Adnan"
+        'icon': "Adnan",
+        'geo': 'highschool'
       },
       {
         'title': 'Adnan\'s Story',
         'hour': '10',
         'minute': '50',
         'duration': '10:45am - 11:15am',
-        'body': 'Jay drops Adnan back off at school. Adnan Says he didn\'t go shopping with jay',
+        'body': 'Lunch Period. Adnan drives to Jay\'s house',
         'icon': "Adnan",
-        'geo': 'highschool'
+        'geo': 'jay_home'
       }
     ],
     '11': [
@@ -45,8 +51,17 @@ var adnan =
         'title': 'Adnan\'s Story',
         'hour': '11',
         'minute': '15',
+        'duration': '11:15am - 11:30am',
+        'body': 'Jay drops Adnan back off at school. Adnan says he didn’t go shopping with Jay.',
+        'icon': "Adnan",
+        'geo': 'highschool'
+      },
+      {
+        'title': 'Adnan\'s Story',
+        'hour': '11',
+        'minute': '30',
         'duration': '11:15am - 12:50pm',
-        'body': 'Free Period',
+        'body': 'Free Period. Adnan Arrives back at school around 11:30am',
         'icon': "Adnan",
         'geo': 'highschool'
       }
@@ -57,7 +72,7 @@ var adnan =
         'hour': '12',
         'minute': '50',
         'duration': '12:50pm - 1:27pm',
-        'body': 'Psychology Class has started. Adnan is late getting a recommendation letter',
+        'body': 'Psychology Class has started. Adnan is late due to getting a recommendation letter',
         'icon': "Adnan",
         'geo': 'highschool'
       }
@@ -101,7 +116,7 @@ var adnan =
         'hour': '16',
         'minute': '30',
         'duration': '4:30pm - 5:00pm ',
-        'body': 'Jay picks Adnan up from track practice',
+        'body': 'Jay picks Adnan up from track practice. Adnan says since it was Ramadan, he and Jay probably went to get something to eat right after track. Then he says they probably went to smoke weed somewhere.',
         'icon': "Adnan",
         'geo': 'highschool'
       }
@@ -122,7 +137,8 @@ var adnan =
         'minute': '07',
         'duration': '6:07pm to 6:24pm',
         'body': 'Officer Adcock calls Adnan looking for Hae',
-        'icon': "Adnan"
+        'icon': "Adnan",
+        "geo": "cathy_home"
       }
     ],
     '19': [
@@ -133,7 +149,7 @@ var adnan =
         'duration': '7:00pm to 8:00pm',
         'body': 'Adnan goes home, picks up food to take to his father at the mosque',
         'icon': "Adnan",
-        'geo': 'mosque'
+        'geo': 'adnan_home'
       }
     ],
     '20': [
@@ -293,7 +309,7 @@ var calls = {   '12/01/99': {   '21': [   {   'body': 'L651C',
                                   'title': 'Call to Nisha'},
                               {   'body': 'L651A',
                                   'duration': '1:25',
-                                  'geo': 'L651A',
+                                  'geo': 'L651',
                                   'hour': '15',
                                   'icon': 'CallOut',
                                   'minute': '48',
@@ -460,5 +476,5 @@ var calls = {   '12/01/99': {   '21': [   {   'body': 'L651C',
                                   'minute': '30',
                                   'title': 'Call to Ann'}]}}
 
-return [calls, adnan];
+return [calls, adnan, nothing];
 });

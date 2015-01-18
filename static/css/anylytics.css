@@ -110,8 +110,8 @@ a:hover {
 
 #head {
 	position:fixed;
-	top:10px;
-	left:10px;
+	top:8px;
+	left:35px;
 	z-index: 1000;
 	display:inline-block;
 }
@@ -278,7 +278,7 @@ h1 {
 
 .leftTitles {
 	padding-left:10px;
-	padding-top:7px;
+	padding-top:3px;
 }
 
 #rightContent {
@@ -311,6 +311,7 @@ h1 {
     text-align:center;
 }
 
+<<<<<<< HEAD
 #mobileHide {
 	position:fixed;
 	top:0;
@@ -333,6 +334,9 @@ h1 {
 }
 
 .hourcolumn:hover {
+=======
+.hourcolumn:hover, .selected {
+>>>>>>> origin/feature-ractive
 	background-color:whitesmoke;
 }
 
