@@ -8,7 +8,7 @@
 <div id = "rightContent" >
     <div id = "timelinewrapper" class="draggable">
      {{#hourNames:i}}
-        <div class="hourcolumn" on-click='activate:{{this}}'>
+        <div class="hourcolumn {{ isselected(this,selectedHour) ? 'selected' : '' }}" on-click='activate:{{this}}'>
             {{#stories}}
                  <div class="stackable">
                  {{ #this[hourNames[i]] }}

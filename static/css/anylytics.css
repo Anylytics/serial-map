@@ -341,7 +341,7 @@ table.timeline > tr {
     text-align:center;
 }
 
-.hourcolumn:hover {
+.hourcolumn:hover, .selected {
 	background-color:whitesmoke;
 }
 

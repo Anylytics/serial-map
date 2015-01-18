@@ -5,7 +5,7 @@
         <div id='listings2' class='listings'>
             {{#stories:i}}
                 <div class='item' on-click='open_feature:{{geo}}'>
-                    <a class='title'>{{title}} - {{hour}}:{{minute}}</a>
+                    <a class='title'>{{title}} - {{time(hour,minute)}}</a>
                     <div>{{duration}}</div>
                     <div>{{body}}
                 </div>

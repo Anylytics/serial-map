@@ -6,7 +6,15 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial'], function ( Ractive, temp
       template: template,
       data: {
         prev: undefined,
-        test: '_a'
+        test: '_a',
+        time: function ( hour, minute ) {
+            if (hour>12){
+                hour=hour-12;
+                return hour + ":"+ minute+ "pm";
+            } else {
+                return hour + ":" + minute + "am";
+            }
+        }
       },
     });
 

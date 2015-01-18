@@ -60,7 +60,7 @@ locations.eachLayer(function(locale) {
         popupAnchor: [0, 0]
       }));*/
   });
-  var popup =  prop.name;
+  var popup =  prop.title;
   locale.bindPopup(popup);
   locale.setIcon(L.icon({
     iconUrl: '/static/img/'+prop.icon+'_t.png',

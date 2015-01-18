@@ -15,9 +15,17 @@ require([ 'ractive', 'rv!../ractive/timeline', 'storydata', 'serial', 'sidebar']
       data: {
         hourNames: [ '8','9','10','11','12','13', '14', '15', '16', '17', '18','19','20','21','22','23','24'],
         date: "13/01/99",
+        selectedHour: -100,
         percentage: function ( minutes ) {
-            return minutes/60.0 * 100;
-        }, 
+            return (minutes/60.0 * 100) - 5;
+        },
+        isselected: function ( hour, selectedHour ) {
+            console.log(selectedHour);
+            if (hour == selectedHour) {
+                return true;
+            }
+            return false;
+        },
         time: function ( hour ) {
             if (hour>12){
                 hour=hour-12;
@@ -43,6 +51,7 @@ require([ 'ractive', 'rv!../ractive/timeline', 'storydata', 'serial', 'sidebar']
         var output = story0.concat(story1);
         output.sort(compare);
         sidebarRactive.set("stories", output);
+        timelineRactive.set("selectedHour", hourName);
     });
     /*
     timelineRactive.on( 'activate', function( event, mapID ) {
