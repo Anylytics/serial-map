@@ -1,15 +1,41 @@
 <div id='contents'>
         <div class='heading'>
-            <h3 id="marginfix">Stories</h3>
+            {{#welcome}}
+                <h3 id="marginfix">Welcome!</h3>
+            {{/welcome}}
+            {{^welcome}}
+                <h3 id="marginfix">Stories</h3>
+            {{/welcome}}
         </div>
         <div id='listings2' class='listings'>
+
             {{#stories:i}}
                 <div class='item' on-click='open_feature:{{geo}}'>
-                    <a class='title'>{{title}} - {{time(hour,minute)}}</a>
+                    <h5 class='title'>{{title}} - {{time(hour,minute)}}</h5>
                     <div>{{duration}}</div>
-                    <div>{{body}}
+                    <div>{{body}}</div>
                 </div>
             {{/stories}}
+
+            {{#welcome}}
+                <div class='item' on-click='open_feature:{{geo}}'>
+                    <h5 class='title'>What is this?</h5>
+                    <div>This is a map application built around the popular podcast <em><a href="http://serialpodcast.com">Serial</a></em>.</div>
+                </div>
+                <div class='item' on-click='open_feature:{{geo}}'>
+                    <h5 class='title'>How do I use it?</h5>
+                    <div>This application is split into three interactive components!</div>
+                    <ul>
+                        <li>Timeline - The timeline at the bottom contains time stamped calls and testimonies. You can drag across the day and select an hour at a time to view evidence in the ...</li>
+                        <li>Stories Panel - The panel you're reading in right now is the stories panel. Here, pieces of evidence will dynamically populate in these little cards, providing information such as the title, a timestamp and a short description. Clicking on a card will activate an icon on the...</li>
+                        <li>Map - The map is probably pretty self explanitory. You can pan with your mouse, zoom in and out with your scroll wheel or with the +/- buttons in the top left. Clicking or hovering on any icons on the map will display a popup with additional information.</li>
+                    </ul>
+                </div>
+                <div class='item' on-click='open_feature:{{geo}}'>
+                    <h5 class='title'>This is awesome! How do I get in touch with you?</h5>
+                    <div>You can reach us at <a href="mailto:hello@anylytics.io">hello@anylytics.io</a>, we'd absolutely love to hear from you!</div>
+                </div>
+            {{/welcome}}
         </div>
 </div>
 

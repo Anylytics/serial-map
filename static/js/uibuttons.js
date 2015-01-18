@@ -31,16 +31,17 @@ require([ 'ractive', 'rv!../ractive/uibuttons', "jquery", "jqueryui"], function 
             }
         });
 
-         $( ".draggable" ).draggable({ cursor: "move", axis: "x", 
+         $( ".draggable" ).draggable({ cursor: "move", axis: "x",
                 stop: function(event, ui) {
                     if ($(this).position().left>0) {
                         //alert("return");
                         $($(this)).animate({"left": "0px"}, 400);
-                    } else if ($(this).position().left<-1800) {
+                    } else if ($(this).position().left<-3600) {
                         //alert("return");
-                        $($(this)).animate({"left": "-1800px"}, 400);
+                        $($(this)).animate({"left": "-3600px"}, 400);
                     }
                 }
             });
-          
+
+
 });

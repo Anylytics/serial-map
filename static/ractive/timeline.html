@@ -1,27 +1,15 @@
 
 <div id="leftLabels">
-    <div class="stackable leftTitles">
-        <select>
-            <option value="calls">Calls</option>
-            <option value="adnan">Adnan's Story</option>
-            <option value="jay1">Jay's 1st Interview</option>
-            <option value="jay2">Jay's 2st Interview</option>
-            <option value="jay3">Jay's Testimony</option>
-            <option value="time">Time</option>
-        </select>
-    </div>
-    <div class="stackable leftTitles">Adnan</div>
-    <div class="stackable leftTitles">Jay</div>
-    <div class="stackable leftTitles">
-        <select>
-            <option value="calls">Calls</option>
-            <option value="adnan">Adnan's Story</option>
-            <option value="jay1">Jay's 1st Interview</option>
-            <option value="jay2">Jay's 2st Interview</option>
-            <option value="jay3">Jay's Testimony</option>
-            <option value="time">Time</option>
-        </select>
-    </div>
+    {{#selectedStories:i}}
+        <div class="stackable leftTitles">
+            <select value={{selectedStories[i]}}>
+                {{#storyOptions:j}}
+                    <option value="{{j}}" {{selectedStories[i] === j ? 'selected' : '' }} >{{this}}</option>
+                {{/storyOptions}}
+            </select>
+        </div>
+    {{/selectedStories}}
+    <div class="stackable leftTitles">Time</div>
 </div>
 <div id = "rightContent" >
     <div id = "timelinewrapper" class="draggable">

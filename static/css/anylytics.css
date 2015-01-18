@@ -110,8 +110,8 @@ a:hover {
 
 #head {
 	position:fixed;
-	top:10px;
-	left:10px;
+	top:8px;
+	left:35px;
 	z-index: 1000;
 	display:inline-block;
 }
@@ -277,7 +277,7 @@ h1 {
 
 .leftTitles {
 	padding-left:10px;
-	padding-top:7px;
+	padding-top:3px;
 }
 
 #rightContent {

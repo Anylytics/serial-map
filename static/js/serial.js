@@ -14,7 +14,7 @@ zoomControl: true })
 
 ///DEFINE RACTIVE////
 var mapDictionary = {}
-
+mapDictionary["map"] = map;
 ///DONEE////
 
 
