@@ -31,6 +31,8 @@ require([ 'ractive', 'rv!../ractive/uibuttons', "jquery", "jqueryui"], function 
             }
         });
 
+        //$('#mobileHide').hide();
+
          $( ".draggable" ).draggable({ cursor: "move", axis: "x", 
                 stop: function(event, ui) {
                     if ($(this).position().left>0) {
