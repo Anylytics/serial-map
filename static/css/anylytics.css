@@ -36,6 +36,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top:-5px;
 }
 
+.marginfix2 {
+    margin-top: -10px;
+}
+
 h1,h2 {
 	color:#456942;
 }
@@ -72,20 +76,39 @@ a:hover {
 #logo {
 	padding-top:5px;
 	height:30px;
+	opacity: 0.6;
+}
+
+#logo:hover {
+	opacity:1;
+}
+
+.headButton {
+	padding-top:5px;
+	height:30px;
+	opacity:.8;
+}
+
+#legendButton:hover {
+	opacity: 1;
 }
 
 #logoxs {
-	height:30px;
+	padding-top:10px;
+	height:60px;
 }
 
 .navbar-brand #logoxs {
-	margin-top:-4px;
-	margin-left:10px;
+	margin-top:-20px;
+	margin-left:-10px;
 }
 
 #head {
-	clear:both;
-
+	position:fixed;
+	top:10px;
+	left:10px;
+	z-index: 1000;
+	display:inline-block;
 }
 
 .navbar {
@@ -105,10 +128,10 @@ a:hover {
 #rightPanel {
 	position:fixed;
 	right:1.5%;
-	top:12.5%;
+	top:2.5%;
 	padding:10px;
 	width:20%;
-	height:70%;
+	height:80%;
 	overflow:auto;
 }
 
@@ -155,7 +178,12 @@ h1 {
 }
 
 .leaflet-container {
-	min-height:1000px;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	cursor: default;
 }
 
 #mapTEST {
@@ -196,74 +224,102 @@ h1 {
   background-color:#f8f8f8;
 }
 
+/*   Legend specific   */
+
+#legend {
+	position:fixed;
+	left:30px;
+	top:100px;
+	height:280px;
+	width:191px;
+	z-index: 1000;
+}
+
+#legendImg {
+	padding:10px;
+	height:280px;
+}
+
+.offScreen {
+	//display:none;
+}
+
 /*   Timeline specific */
 
 
-#timelineContainer {
+.timelineContainer {
 	position:fixed;
-	bottom: 20px;
+	bottom: 40px;
 	width:97%;
 	margin-left: 1.5%;
-	height:12%;
-	min-height:85px;
-	padding-left:10px;
+	height:120px;
+	//min-height:85px;
 }
 
-
-.month-labels {
-    position: absolute;
-    right: 0;
-    height: 2em;
-    bottom: 0em;
-    width: 90%;
-}
-
-.month-labels span {
-    text-align: center;
-    float: left;
-    display: block;
-}
-
-.timeline-names {
-	//background-color:red;
-	position: absolute;
-	left:5px;
-	width:10%;
-	height:100%;
-}
-
-.timeline-names td {
-	padding: 5px;
-}
-
-table.timeline, th, td {
-  // border: 1px solid black;	
-
+table.timeline#leftLabels, th#leftLabels, td#leftLabels {
 	border-right-style:solid;
 	border-right-width:1px;
 	border-right-color:lightgrey;
-   padding-left:2px;
-   padding-right:2px;	
+    padding-left:2px;
+    padding-right:2px;
 }
 
-table tr#timelabels td {
-	text-align:center;
-}
+
+
 
 table th {
-	//background-color: lightsteelblue;
 	font-weight:normal;
 	padding-right:10px;
 }
 
 table.timeline {
 	height:100%;
+	display:inline-block;
+	table-layout: fixed;
 }
 
 table tr#timeLabels td {
 	text-align:center;
-	min-width:45px;
+	width:250px;
 }
+
+table.timeline > tr {
+	height:30px;
+	width:auto;
+}
+
+
+#leftLabels {
+    margin-right: 10px;
+	width:9%;
+    height: 100%;
+    display:inline-block;
+}
+
+#rightContent {
+	width:90%;
+    height: 100%;
+	display:inline-block;
+	overflow-x:hidden;
+    overflow-y: hidden;
+}
+
+#timelinewrapper {
+    width: 30000px;
+    height: inherit;
+}
+
+.stackable {
+    height: 25%;
+    overflow: visible;
+}
+
+.hourcolumn{
+    display: inline-block;
+    width: 200px;
+    height: inherit;
+}
+
 
 img.eventIcon {
 	height:20px;
@@ -272,7 +328,10 @@ img.eventIcon {
 div.eventContainer {
 	//display:inline;
 	position:absolute;
-	margin-top:-12px;
+}
+
+#eventTable {
+	width:auto;
 }
 
 div.timeElement {

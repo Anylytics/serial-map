@@ -53,14 +53,20 @@ locations.eachLayer(function(locale) {
 
       // 2. center the map on the selected marker.
       //map.setView(locale.getLatLng(), 14);
+      /*locale.setIcon(L.icon({
+        iconUrl: '/static/img/'+prop.icon+'_a.gif',
+        iconSize: [75, 75],
+        iconAnchor: [37, 75],
+        popupAnchor: [0, 0]
+      }));*/
   });
   var popup =  prop.name;
-  //locale.bindPopup(popup);
+  locale.bindPopup(popup);
   locale.setIcon(L.icon({
-    iconUrl: '/static/img/cellTower.png',
-    iconSize: [21.5, 32.5],
-    iconAnchor: [0, 0],
-    popupAnchor: [0, 0]
+    iconUrl: '/static/img/'+prop.icon+'.png',
+    iconSize: [75, 75],
+    iconAnchor: [37, 73],
+    popupAnchor: [0, -35]
   }));
 });
 

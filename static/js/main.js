@@ -28,4 +28,4 @@ require([ 'ractive'], function ( Ractive) {
 
 require(['mapbox', "serial"]);
 //require(['temperatures']);
-require(['sidebar', 'timeline' ]);
+require(['sidebar', 'timeline', "uibuttons" ]);

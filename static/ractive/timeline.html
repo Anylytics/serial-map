@@ -1,12 +1,43 @@
- <table class="timeline table table-hover" id="leftLabels">
+
+<div id="leftLabels">
+    <div class="stackable">Calls</div>
+    <div class="stackable">Adnan</div>
+    <div class="stackable">Jay</div>
+    <div class="stackable">Time</div>
+</div>
+<div id = "rightContent">
+    <div id = "timelinewrapper">
+     {{#hourNames:i}}
+        <div class="hourcolumn" on-click='activate:{{this}}'>
+            {{#stories}}
+                 <div class="stackable">
+                 {{ #this[hourNames[i]] }}
+                        <div class="timeElement">
+                            <div class="eventContainer" style="z-index:{{hour}}{{minute}}; left:{{percentage(minute)}}%;">
+                                <img class="eventIcon" id="draggable" src="/static/img/{{icon}}.png"/>
+                            </div>
+                        </div>
+                 {{/calls}}
+                </div>
+            {{/stories}}
+            <div class="stackable">
+                {{this}}
+            </div>
+        </div>
+     {{/hourNames}}
+     </div>
+</div>
+
+<!--
+<div id="rightContent">
+<table class="timeline table" id="eventTable">
     <tr>
-        <td>Calls</td>
         {{#hourNames:i}}
             <td>
                 {{ #calls[hourNames[i]] }}
                     <div class="timeElement">
                         <div class="eventContainer" style="z-index:{{hour}}{{minute}}; left:{{percentage(minute)}}%;">
-                            <img on-click='activate:{{tower}}' class="eventIcon" src="/static/img/callout.png"/>
+                            <img class="eventIcon" id="draggable" src="/static/img/callout.png"/>
                         </div>
                     </div>
                 {{/calls}}
@@ -14,7 +45,6 @@
         {{/hourNames}}
     </tr>
     <tr>
-        <td>Adnan</td>
         <td><div class="timeElement"><div id="call_107PM" class="eventContainer"><img class="eventIcon" src="/static/img/adnan.png"/></div></div></td>
         <td></td>
         <td></td>
@@ -23,7 +53,6 @@
         <td></td>
     </tr>
     <tr>
-        <td>Jay</td>
         <td></td>
         <td></td>
         <td><div class="timeElement"><div id="call_305PM" class="eventContainer"><img class="eventIcon" src="/static/img/jay1.png"/></div></div></td>
@@ -32,12 +61,11 @@
         <td></td>
     </tr>
     <tr id="timeLabels">
-        <td>Time</td>
-        <td>1PM</td>
-        <td>2PM</td>
-        <td>3PM</td>
-        <td>4PM</td>
-        <td>5PM</td>
-        <td>6PM</td>
+        {{#hourNames:i}}
+            <td>{{hourNames[i]}}</td>
+        {{/hourNames}}
+
     </tr>
+
 </table>
+</div>-->

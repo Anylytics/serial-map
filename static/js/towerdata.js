@@ -1,155 +1,214 @@
 define([], function() {
 
-var geojson = [
-
-      {
-        "type": "FeatureCollection",
-        "features": [
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -76.615295,
-                39.293423
-              ]
-            },
-            "properties": {
-              "city": "Baltimore",
-              "name": "L602"
-            }
-          },
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -76.672778,
-                39.272222
-              ]
-            },
-            "properties": {
-              "city": "Baltimore",
-              "name": "L608"
-            }
-          },
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -76.739194,
-                39.308212
-              ]
-            },
-            "properties": {
-              "city": "Baltimore",
-              "name": "L651"
-            }
-          },
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -76.670271,
-                39.294763
-              ]
-            },
-            "properties": {
-              "city": "Baltimore",
-              "name": "L652"
-            }
-          },
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -76.686667,
-                39.292222
-              ]
-            },
-            "properties": {
-              "city": "Baltimore",
-              "name": "L653"
-            }
-          },
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -76.738611,
-                39.284722
-              ]
-            },
-            "properties": {
-              "city": "Baltimore",
-              "name": "L654"
-            }
-          },
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -76.713301,
-                39.260917
-              ]
-            },
-            "properties": {
-              "city": "Baltimore",
-              "name": "L655"
-            }
-          },
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -76.822981,
-                39.299114
-              ]
-            },
-            "properties": {
-              "city": "Baltimore",
-              "name": "L688"
-            }
-          },
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -76.698933,
-                39.310432
-              ]
-            },
-            "properties": {
-              "city": "Baltimore",
-              "name": "L689"
-            }
-          },
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -76.757789,
-                39.288023
-              ]
-            },
-            "properties": {
-              "city": "Baltimore",
-              "name": "L698"
-            }
-          }
-
-
-        ]
-      }
-];
+var geojson = [   {   'features': [   {   'geometry': {   'coordinates': [   -76.615295,
+                                                               39.293423],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'cellTower',
+                                              'name': 'L602',
+                                              'title': 'L602'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.672778,
+                                                               39.272222],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'cellTower',
+                                              'name': 'L608',
+                                              'title': 'L608'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.739194,
+                                                               39.308212],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'cellTower',
+                                              'name': 'L651',
+                                              'title': 'L651'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.670271,
+                                                               39.294763],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'cellTower',
+                                              'name': 'L652',
+                                              'title': 'L652'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.686667,
+                                                               39.292222],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'cellTower',
+                                              'name': 'L653',
+                                              'title': 'L653'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.738611,
+                                                               39.284722],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'cellTower',
+                                              'name': 'L654',
+                                              'title': 'L654'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.713301,
+                                                               39.260917],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'cellTower',
+                                              'name': 'L655',
+                                              'title': 'L655'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.822981,
+                                                               39.299114],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'cellTower',
+                                              'name': 'L688',
+                                              'title': 'L688'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.698933,
+                                                               39.310432],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'cellTower',
+                                              'name': 'L689',
+                                              'title': 'L689'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.757789,
+                                                               39.288023],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'cellTower',
+                                              'name': 'L698',
+                                              'title': 'L698'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.762432,
+                                                               39.25357],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Ellicott City',
+                                              'icon': 'marker',
+                                              'name': 'cliffs',
+                                              'title': 'The Cliffs'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.760551,
+                                                               39.306077],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Catonsville',
+                                              'icon': 'house',
+                                              'name': 'adnan_home',
+                                              'title': "Adnan's House"},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.786776,
+                                                               39.405724],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Owings Mills',
+                                              'icon': 'marker',
+                                              'name': 'owmall',
+                                              'title': 'Owings Mills Mall'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.786776,
+                                                               39.405724],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Windsor Mill',
+                                              'icon': 'marker',
+                                              'name': 'bestbuy',
+                                              'title': 'Best Buy'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.748211,
+                                                               39.286383],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Catonsville',
+                                              'icon': 'house',
+                                              'name': 'jay_home',
+                                              'title': "Jay's House"},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.73436,
+                                                               39.3153438],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'marker',
+                                              'name': 'highschool',
+                                              'title': 'Woodlawn High School'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.732104,
+                                                               39.289893],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Woodlawn',
+                                              'icon': 'marker',
+                                              'name': 'shopping_center',
+                                              'title': 'Westview Shopping Center'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.72295,
+                                                               39.3520108],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'marker',
+                                              'name': 'campfield',
+                                              'title': 'Campfield Early Learning Center'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.725751,
+                                                               39.294538],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Woodlawn',
+                                              'icon': 'house',
+                                              'name': 'jenn_home',
+                                              'title': "Jenn's House"},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.7086552,
+                                                               39.3018216],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'car',
+                                              'name': 'park_ride',
+                                              'title': 'I-70 Park & Ride'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.69975564,
+                                                               39.30171265],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'tombstone',
+                                              'name': 'death_site',
+                                              'title': 'Hae Min Lee Burial Site'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.6766438,
+                                                               39.3238367],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'marker',
+                                              'name': 'forest_park',
+                                              'title': 'Forest Park'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.69754148,
+                                                               39.26410811],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'house',
+                                              'name': 'cathy_home',
+                                              'title': '"Cathy\'s" Apartment'},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.67613208,
+                                                               39.29114107],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'car',
+                                              'name': 'hae_car',
+                                              'title': "Hae's Car"},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.66266739,
+                                                               39.29447068],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'car',
+                                              'name': 'trunk_pop',
+                                              'title': "Intersection where Adnan shows Jay Hae's body"},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.747656,
+                                                               39.302665],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'marker',
+                                              'name': 'mosque',
+                                              'title': "Islamic Society of Baltimore"},
+                            'type': 'Feature'}],
+        'type': 'FeatureCollection'}];
 return geojson;
 
 }
