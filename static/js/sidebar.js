@@ -47,6 +47,8 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
                 }
             }
         }
+        var avglatlng = { "lat": 0, "lng": 0};
+        var counter = 0;
         for (var item in newValue)
         {
             if (newValue[item]["geo"] in mapdictionary)
@@ -59,7 +61,19 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
                     iconAnchor: [37, 75],
                     popupAnchor: [0, -35]
                 }));
+                var latlng = locale.getLatLng();
+                avglatlng["lat"] += latlng["lat"];
+                avglatlng["lng"] += latlng["lng"];
+                counter++;
             }
+        }
+        if (avglatlng["lat"] != 0 && avglatlng["lng"] != 0)
+        {
+            avglatlng["lat"] /= counter;
+            avglatlng["lng"] /= counter;
+            mapdictionary["map"].setView(avglatlng, 14);
+
+            sidebarRactive.set('test', true);
         }
 
     });
