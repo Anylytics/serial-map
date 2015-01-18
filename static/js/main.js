@@ -4,7 +4,8 @@ require.config({
     paths: {
         ractive: 'lib/ractive',
         rv: 'loaders/rv',
-        mapbox: 'lib/mapbox'
+        mapbox: 'lib/mapbox',
+        jquery: 'lib/jquery-1.11'
     }
 });
 
@@ -27,4 +28,4 @@ require([ 'ractive'], function ( Ractive) {
 
 require(['mapbox', "serial"]);
 //require(['temperatures']);
-require(['timeline']);
+require(['sidebar', 'timeline', "uibuttons" ]);

@@ -1,28 +1,34 @@
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
 
+<div id="leftLabels">
+    <div class="stackable">Calls</div>
+    <div class="stackable">Adnan</div>
+    <div class="stackable">Jay</div>
+    <div class="stackable">Time</div>
+</div>
+<div id = "rightContent">
+    <div id = "timelinewrapper">
+     {{#hourNames:i}}
+        <div class="hourcolumn" on-click='activate:{{this}}'>
+            {{#stories}}
+                 <div class="stackable">
+                 {{ #this[hourNames[i]] }}
+                        <div class="timeElement">
+                            <div class="eventContainer" style="z-index:{{hour}}{{minute}}; left:{{percentage(minute)}}%;">
+                                <img class="eventIcon" id="draggable" src="/static/img/{{icon}}.png"/>
+                            </div>
+                        </div>
+                 {{/calls}}
+                </div>
+            {{/stories}}
+            <div class="stackable">
+                {{this}}
+            </div>
+        </div>
+     {{/hourNames}}
+     </div>
+</div>
 
-<script>
-  $(function() {
-    $( "#draggable" ).draggable();
-  });
-  </script>
-
-<table class="timeline table table-hover" id="leftLabels">
-    <tr>
-        <th>Calls</th>
-    </tr>
-    <tr>
-        <th>Adnan</th>
-    </tr>
-    <tr>
-        <th>Jay</th>
-    </tr>
-    <tr >
-        <th>Time</th>
-    </tr>
-</table>
-
+<!--
 <div id="rightContent">
 <table class="timeline table" id="eventTable">
     <tr>
@@ -37,12 +43,6 @@
                 {{/calls}}
             </td>
         {{/hourNames}}
-        <!--<td></td>
-        <td></td>
-        <td><div class="timeElement"><div id="call_305PM" class="eventContainer"><img class="eventIcon" src="/static/img/callout.png"/></div><div id="call_327PM" class="eventContainer"><img class="eventIcon" src="/static/img/callin.png"/></div></div></td>
-        <td></td>
-        <td></td>
-        <td></td>-->
     </tr>
     <tr>
         <td><div class="timeElement"><div id="call_107PM" class="eventContainer"><img class="eventIcon" src="/static/img/adnan.png"/></div></div></td>
@@ -64,8 +64,8 @@
         {{#hourNames:i}}
             <td>{{hourNames[i]}}</td>
         {{/hourNames}}
-            
+
     </tr>
-       
+
 </table>
-</div>
+</div>-->

@@ -1,0 +1,15 @@
+<div id='contents'>
+        <div class='heading'>
+            <h3 id="marginfix">Stories</h3>
+        </div>
+        <div id='listings2' class='listings'>
+            {{#stories:i}}
+                <div class='item' on-click='open_feature:{{geo}}'>
+                    <a class='title'>{{title}} - {{hour}}:{{minute}}</a>
+                    <div>{{duration}}</div>
+                    <div>{{body}}
+                </div>
+            {{/stories}}
+        </div>
+</div>
+
