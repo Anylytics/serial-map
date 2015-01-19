@@ -207,7 +207,26 @@ var geojson = [   {   'features': [   {   'geometry': {   'coordinates': [   -76
                                               'icon': 'marker',
                                               'name': 'mosque',
                                               'title': "Islamic Society of Baltimore"},
-                            'type': 'Feature'}],
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.750169,
+                                                               39.312859],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Woodlawn',
+                                              'icon': 'marker',
+                                              'name': 'ssmall',
+                                              'title': "Security Square Mall"},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.692938,
+                                                               39.289776],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Baltimore',
+                                              'icon': 'house',
+                                              'name': 'patrick_home',
+                                              'title': "Patrick's House"},
+                            'type': 'Feature'}
+
+
+                            ],
         'type': 'FeatureCollection'}];
 return geojson;
 

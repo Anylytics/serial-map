@@ -16,6 +16,7 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
         test: true,
         stories: undefined,
         welcome: true,
+        selectedStory: undefined,
         time: function ( hour, minute ) {
             if (hour>12){
                 hour=hour-12;
@@ -28,7 +29,8 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
     });
 
     sidebarRactive.observe( 'stories', function ( newValue, oldValue, keypath ) {
-        if (newValue != undefined)
+        sidebarRactive.set('selectedStory', undefined);
+        if (newValue != undefined && newValue.length >0)
             sidebarRactive.set('welcome',false);
         if (oldValue != undefined)
         {
@@ -46,6 +48,7 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
                     }));
                 }
             }
+            sidebarRactive.set('prev', undefined);
         }
         var avglatlng = { "lat": 0, "lng": 0};
         var counter = 0;
@@ -71,14 +74,15 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
         {
             avglatlng["lat"] /= counter;
             avglatlng["lng"] /= counter;
-            mapdictionary["map"].setView(avglatlng, 14);
+            mapdictionary["map"].panTo(avglatlng);
 
             sidebarRactive.set('test', true);
         }
 
     });
 
-    sidebarRactive.on( 'open_feature', function( event, feature_name )  {
+    sidebarRactive.on( 'open_feature', function( event, feature_name, index )  {
+        sidebarRactive.set('selectedStory', index);
         var prev = sidebarRactive.get('prev');
         if (prev != undefined)
         {
@@ -106,19 +110,19 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
             if (prev == locale)
             {
                 if (test){
-                    mapdictionary["map"].setView(clone(locale.getLatLng()), 14);
+                    mapdictionary["map"].panTo( clone(locale.getLatLng()) );
                     sidebarRactive.set('test', false);
                 }
                 else
                 {
-                    mapdictionary["map"].setView(locale.getLatLng(), 14);
+                    mapdictionary["map"].panTo( locale.getLatLng() );
                     sidebarRactive.set('test', true);
                 }
 
             }
             else
             {
-                mapdictionary["map"].setView(locale.getLatLng(), 14);
+                mapdictionary["map"].panTo( locale.getLatLng() );
                 sidebarRactive.set('test', true);
             }
 

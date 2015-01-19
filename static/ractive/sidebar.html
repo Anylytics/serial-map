@@ -10,7 +10,8 @@
         <div id='listings2' class='listings'>
 
             {{#stories:i}}
-                <div class='item' on-click='open_feature:{{geo}}'>
+                <div class="item {{ i === selectedStory ? 'selected' : '' }}" on-click='open_feature:{{geo}},{{i}}'>
+                    <img class="itemicon" src="/static/img/{{icon}}.png" />
                     <h5 class='title'>{{title}} - {{time(hour,minute)}}</h5>
                     <div>{{duration}}</div>
                     <div>{{body}}</div>
