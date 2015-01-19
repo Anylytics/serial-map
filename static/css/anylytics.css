@@ -215,9 +215,19 @@ h1 {
   box-shadow: 1px 1px 1px #888888;
 }
 
+.itemicon {
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
 .listings .item:hover {
   background-color:white;
   margin-left:10px;
+}
+
+.listings .selected {
+  background-color:white;
 }
 
 .listings .item:last-child { border-bottom:none; }
@@ -369,3 +379,5 @@ div#call_107PM {
 	z-index:1307;
 	left:10%;
 }
+
+
