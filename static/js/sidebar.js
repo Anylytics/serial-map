@@ -44,7 +44,7 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
                     var locale = mapdictionary[oldValue[item]["geo"]];
                     var prop = locale.feature.properties;
                     locale.setIcon(L.icon({
-                        iconUrl: '/static/img/'+prop.icon+'_t.png',
+                        iconUrl: './static/img/'+prop.icon+'_t.png',
                         iconSize: [75, 75],
                         iconAnchor: [37, 75],
                         popupAnchor: [0, -35]
@@ -62,7 +62,7 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
                 var locale = mapdictionary[newValue[item]["geo"]];
                 var prop = locale.feature.properties;
                 locale.setIcon(L.icon({
-                    iconUrl: '/static/img/'+prop.icon+'.png',
+                    iconUrl: './static/img/'+prop.icon+'.png',
                     iconSize: [75, 75],
                     iconAnchor: [37, 75],
                     popupAnchor: [0, -35]
@@ -92,7 +92,7 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
             var locale = prev;
             var prop = locale.feature.properties;
             locale.setIcon(L.icon({
-                iconUrl: '/static/img/'+prop.icon+'.png',
+                iconUrl: './static/img/'+prop.icon+'.png',
                 iconSize: [75, 75],
                 iconAnchor: [37, 75],
                 popupAnchor: [0, -35]
@@ -104,7 +104,7 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
             var prop = locale.feature.properties;
             var test = sidebarRactive.get('test');
             locale.setIcon(L.icon({
-                iconUrl: '/static/img/'+prop.icon+'_a.gif',
+                iconUrl: './static/img/'+prop.icon+'_a.gif',
                 iconSize: [75, 75],
                 iconAnchor: [37, 75],
                 popupAnchor: [0, -35]
@@ -142,15 +142,3 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
 
 
 });
-/*
-for (var key in mapdictionary)
-        {
-            var locale = mapdictionary[key];
-            var prop = locale.feature.properties;
-            locale.setIcon(L.icon({
-                iconUrl: '/static/img/'+prop.icon+'.png',
-                iconSize: [75, 75],
-                iconAnchor: [37, 75],
-                popupAnchor: [0, 0]
-            }));
-        }*/

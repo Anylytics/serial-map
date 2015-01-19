@@ -63,7 +63,7 @@ locations.eachLayer(function(locale) {
   var popup =  prop.title;
   locale.bindPopup(popup);
   locale.setIcon(L.icon({
-    iconUrl: '/static/img/'+prop.icon+'_t.png',
+    iconUrl: './static/img/'+prop.icon+'_t.png',
     iconSize: [75, 75],
     iconAnchor: [37, 73],
     popupAnchor: [0, -35]

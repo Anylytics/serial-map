@@ -142,7 +142,7 @@ a:hover {
 }
 
 .floatPanel {
-	background:url(/static/img/whitesmoke.png);
+	background:url(../img/whitesmoke.png);
 	border-radius:5px;
 	//border-style:solid;
 	border-color:#54A148;
@@ -338,7 +338,7 @@ h1 {
 	bottom:0;
 	left:0;
 	right:0;
-	background:url(/static/img/whitesmoke.png);
+	background:url(../img/whitesmoke.png);
 	z-index: 2000;
 }
 
