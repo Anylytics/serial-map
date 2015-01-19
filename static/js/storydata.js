@@ -505,7 +505,7 @@ var jay3 = {
         'title': 'Jay\'s Testimonial (Second Trial)',
         'hour': '13',
         'minute': '15',
-        'duration': '[Approximate Time] 1:15pm - 1:45pm',
+        'duration': '[Approximate Time]',
         'body': 'Jay goes to Jenn\'s house. She’s not home, but Jay and her brother play video games for about 30 minutes.',
         'icon': "Jay3",
         'geo': 'jenn_home'
@@ -832,7 +832,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '12',
         'minute': '55',
-        'duration': '[Approximate Time] 12:50pm',
+        'duration': '[Approximate Time] 12:55pm',
         'body': 'Jay goes to Jenn’s house and plays video games with her brother. Approximately five minutes after dropping Adnan at home',
         'icon': "jay2",
         'geo': 'jenn_home'
@@ -843,7 +843,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '13',
         'minute': '30',
-        'duration': '1:30pm',
+        'duration': '',
         'body': 'Jenn comes home from work. Jay tells Jenn about Adnan’s plans to kill Hae.',
         'icon': "jay2",
         'geo': 'jenn_home'
@@ -852,7 +852,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '13',
         'minute': '45',
-        'duration': '[Time Unknown] 1:30pm - 3:30pm',
+        'duration': '[Time Unknown]',
         'body': 'Jay gets three calls from Adnan while at Jenn’s house, two on the cell phone and one on Jenn’s landline.',
         'icon': "jay2",
         'geo': 'jenn_home'
@@ -863,7 +863,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '15',
         'minute': '30',
-        'duration': '3:30pm',
+        'duration': '',
         'body': 'Jay doesn’t hear from Adnan, so he leaves Jenn’s house.',
         'icon': "jay2",
         'geo': 'jenn_home'
@@ -871,17 +871,8 @@ var jay2 =
       {
         'title': 'Jay\'s 2nd Interview',
         'hour': '15',
-        'minute': '32',
-        'duration': '2 minutes, 22 seconds',
-        'body': 'On the way to Forest Park to buy weed, Adnan calls Nisha. The cell tower that originates this call is L651C, which doesn\'t cover the area where Jay says they\'re driving.',
-        'icon': "jay2",
-        'geo': 'L651'
-      },
-      {
-        'title': 'Jay\'s 2nd Interview',
-        'hour': '15',
         'minute': '35',
-        'duration': '[Approximate Time] 3:35pm',
+        'duration': '[Approximate Time]',
         'body': 'Adnan calls Jay when Jay is halfway home to say “Come and get me, I’m at Best Buy.”',
         'icon': "jay2",
         'geo': 'jay_home'
@@ -890,7 +881,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '15',
         'minute': '40',
-        'duration': '[Approximate Time] 3:40pm',
+        'duration': '[Approximate Time]',
         'body': 'Adnan shows Jay Hae’s body in the trunk of her car at the Best Buy parking lot.',
         'icon': "jay2",
         'geo': 'bestbuy'
@@ -899,7 +890,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '15',
         'minute': '55',
-        'duration': '[Approximate Time] 3:55pm',
+        'duration': '[Approximate Time]',
         'body': 'Adnan and Jay ditch Hae’s car at the I-70 Park and Ride and head to the Forest Park neighborhood looking for weed.',
         'icon': "jay2",
         'geo': 'park_ride'
@@ -907,11 +898,20 @@ var jay2 =
       {
         'title': 'Jay\'s 2nd Interview',
         'hour': '15',
-        'minute': '59',
-        'duration': '25 seconds',
-        'body': 'Jay calls his friend Patrick to score some weed. The cell tower that originates this call is L651A, which doesn’t cover the area where Jay says they’re driving.',
+        'minute': '57',
+        'duration': '[Approximate Time]',
+        'body': 'On the way to Forest Park to buy weed, Adnan calls Nisha.',
         'icon': "jay2",
-        'geo': 'L651'
+        'geo': 'forest_park'
+      },
+      {
+        'title': 'Jay\'s 2nd Interview',
+        'hour': '15',
+        'minute': '59',
+        'duration': '[Approximate Time]',
+        'body': 'Jay calls his friend Patrick to score some weed.',
+        'icon': "jay2",
+        'geo': 'forest_park'
       }
     ],
     '16': [
@@ -919,7 +919,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '16',
         'minute': '30',
-        'duration': '[Approximate Time] 4:30pm ~ 5:00pm',
+        'duration': '[Approximate Time]',
         'body': 'Adnan and Jay smoke a blunt at Patapsco State Park. They stay there 20-30 minutes.',
         'icon': "jay2",
         'geo': 'cliffs'
@@ -930,7 +930,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '17',
         'minute': '10',
-        'duration': '[Approximate Time] 5:10pm',
+        'duration': '[Approximate Time]',
         'body': 'Jay drops Adnan off at track practice.',
         'icon': "jay2",
         'geo': 'highschool'
@@ -939,25 +939,16 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '17',
         'minute': '15',
-        'duration': '[Approximate Time] 5:15pm - 5:45pm',
-        'body': 'Jay drives to Gilston Park to smoke a blunt by himself. ',
+        'duration': '[Approximate Time]',
+        'body': 'Jay drives to Gilston Park to smoke a blunt by himself. Then he drives back to his house, and then to “Cathy’s” house to smoke weed there for another 10-20 minutes.',
         'icon': "jay2",
         'geo': 'gilston'
       },
       {
         'title': 'Jay\'s 2nd Interview',
         'hour': '17',
-        'minute': '30',
-        'duration': '[Approximate Time] 5:15pm - 5:45pm',
-        'body': 'Jay drives back to his house, and then to “Cathy’s” house to smoke weed there for another 10-20 minutes.',
-        'icon': "jay2",
-        'geo': 'cathy_home'
-      },
-      {
-        'title': 'Jay\'s 2nd Interview',
-        'hour': '17',
         'minute': '45',
-        'duration': '5:45pm',
+        'duration': '',
         'body': 'Adnan calls Jay on the cell phone and asks Jay to pick him up from track practice.',
         'icon': "jay2",
         'geo': 'cathy_home'
@@ -968,7 +959,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '18',
         'minute': '00',
-        'duration': '6:00pm',
+        'duration': '',
         'body': 'Jay picks Adnan up from track practice.',
         'icon': "jay2",
         'geo': 'highschool'
@@ -977,17 +968,8 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '18',
         'minute': '15',
-        'duration': '6:30pm',
+        'duration': '',
         'body': 'Jay and Adnan go back to “Cathy’s” house.',
-        'icon': "jay2",
-        'geo': 'cathy_home'
-      },
-      {
-        'title': 'Jay\'s 2nd Interview',
-        'hour': '18',
-        'minute': '20',
-        'duration': '[Time Unknown]',
-        'body': 'Hae\'s brother calls Adnan looking for Hae',
         'icon': "jay2",
         'geo': 'cathy_home'
       },
@@ -996,7 +978,7 @@ var jay2 =
         'hour': '18',
         'minute': '25',
         'duration': '[Time Unknown]',
-        'body': 'Police call Adnan looking for Hae',
+        'body': 'Hae\'s brother calls Adnan looking for Hae. Then the police call Adnan looking for Hae',
         'icon': "jay2",
         'geo': 'cathy_home'
       },
@@ -1004,7 +986,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '18',
         'minute': '30',
-        'duration': '[Approximate Time] 6:30pm',
+        'duration': '[Approximate Time]',
         'body': 'Jay and Adnan drive to Jay’s house to get shovels.',
         'icon': "jay2",
         'geo': 'jay_home'
@@ -1013,7 +995,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '18',
         'minute': '55',
-        'duration': '[Approximate Time] 6:55pm',
+        'duration': '[Approximate Time]',
         'body': 'Jay and Adnan return to the Park and Ride to retrieve Hae’s car.',
         'icon': "jay2",
         'geo': 'park_ride'
@@ -1024,7 +1006,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '19',
         'minute': '05',
-        'duration': '[Time Unknown] 7:00pm onwards...',
+        'duration': '[Time Unknown]',
         'body': 'Adnan and Jay arrive at Leakin Park and bury Hae’s body in the woods.',
         'icon': "jay2",
         'geo': 'death_site'
@@ -1033,7 +1015,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '19',
         'minute': '25',
-        'duration': '[Time Unknown] 7:00pm onwards...',
+        'duration': '[Time Unknown]',
         'body': 'Adnan and Jay drive around for 30 minutes until finally ditching Hae’s car in a residential lot.',
         'icon': "jay2",
         'geo': 'hae_car'
@@ -1042,7 +1024,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '19',
         'minute': '40',
-        'duration': '[Time Unknown] 7:00pm onwards...',
+        'duration': '[Time Unknown]',
         'body': 'Adnan throws Hae’s things and the shovels into a dumpster at Westview Mall.',
         'icon': "jay2",
         'geo': 'shopping_center'
@@ -1051,7 +1033,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '19',
         'minute': '50',
-        'duration': '[Time Unknown] 7:00pm onwards...',
+        'duration': '[Time Unknown]',
         'body': 'Adnan drops Jay off at home.',
         'icon': "jay2",
         'geo': 'jay_home'
@@ -1062,7 +1044,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '20',
         'minute': '10',
-        'duration': '[Time Unknown] 7:00pm onwards...',
+        'duration': '[Time Unknown]',
         'body': 'Jenn picks Jay up and he tells her that Adnan killed Hae. She takes him to the F&M and he throws his clothes in a dumpster. Then they go back to the dumpster at Westview Mall and he wipes his fingerprints off the shovels. Jenn told the detectives that she took Jay to throw his clothes out the next day',
         'icon': "jay2",
         'geo': 'jay_home'
@@ -1071,7 +1053,7 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '20',
         'minute': '30',
-        'duration': '[Time Unknown] 7:00pm onwards...',
+        'duration': '[Time Unknown]',
         'body': 'Jay goes to see Stephanie. Then Jenn and Jay go back to “Cathy’s” for the rest of the evening until Jay goes home.',
         'icon': "jay2",
         'geo': 'cathy_home'
@@ -1080,5 +1062,213 @@ var jay2 =
   }
 };
 
-return [calls, adnan, jay2, jay3, nothing];
+var jay1 = {
+  '13/01/99': {
+    '10': [
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '11',
+        'minute': '45',
+        'duration': '',
+        'body': 'Jay gets a call from Adnan.',
+        'icon': "Jay1",
+        'geo': 'jay_home'
+      }
+    ],
+    '11': [
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '11',
+        'minute': '45',
+        'duration': '',
+        'body': 'Adnan arrives at Jay\'s house. They go to Westview Mall and Adnan tells Jay that he\'s going to kill Hae.',
+        'icon': "Jay1",
+        'geo': 'shopping_center'
+      }
+    ],
+    '12': [
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '12',
+        'minute': '30',
+        'duration': '',
+        'body': 'Jay drops Adnan off at school and keeps Adnan\'s phone and car.',
+        'icon': "Jay1",
+        'geo': 'highschool'
+      },
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '12',
+        'minute': '35',
+        'duration': '[Approximate Time]',
+        'body': 'Jay goes to Jenn\'s house and hangs out there for about three hours.',
+        'icon': "Jay1",
+        'geo': 'jenn_home'
+      },
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '12',
+        'minute': '45',
+        'duration': '[Approximate Time]',
+        'body': 'Jenn gets home from work.',
+        'icon': "Jay1",
+        'geo': 'jenn_home'
+      }
+    ],
+    '15': [
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '15',
+        'minute': '40',
+        'duration': '',
+        'body': 'Adnan calls Jay and tells Jay to meet him at a "strip" off Edmondson Ave.',
+        'icon': "Jay1",
+        'geo': 'jenn_home'
+      }
+    ],
+    '16': [
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '16',
+        'minute': '00',
+        'duration': '',
+        'body': 'At the meeting point off Edmondson Ave., Adnan shows Jay Hae\'s body in the trunk of her car.',
+        'icon': "Jay1",
+        'geo': 'trunk_pop'
+      },
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '16',
+        'minute': '15',
+        'duration': '[Approximate Time]',
+        'body': 'Adnan and Jay ditch Hae\'s car at the I-70 Park and Ride.',
+        'icon': "Jay1",
+        'geo': 'park_ride'
+      },
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '16',
+        'minute': '35',
+        'duration': '[Approximate Time]',
+        'body': 'Adnan and Jay smoke a blunt at Patapsco State Park. They stay there for about 30 minutes.',
+        'icon': "Jay1",
+        'geo': 'cliffs'
+      },
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '16',
+        'minute': '30',
+        'duration': '',
+        'body': 'Jay drops Adnan off at track practice and goes home.',
+        'icon': "Jay1",
+        'geo': 'highschool'
+      }
+    ],
+    '18': [
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '18',
+        'minute': '45',
+        'duration': '',
+        'body': 'Adnan calls Jay on the cell phone and asks Jay to pick him up from practice. At the trial, Adnan’s track coach says practice ran from about 4:00 p.m. until 5:30 - 6:00 p.m.',
+        'icon': "Jay1",
+        'geo': 'jay_home'
+      }
+    ],
+    '19': [
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '19',
+        'minute': '00',
+        'duration': '[Approximate Time]',
+        'body': 'Jay and Adnan go to McDonald\'s. The police call Adnan while they\'re eating, looking for Hae.',
+        'icon': "Jay1",
+        'geo': 'mcdonalds'
+      },
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '19',
+        'minute': '15',
+        'duration': '[Approximate Time]',
+        'body': 'They leave McDonald\'s and go to Jay\'s house for a shovel and pick.',
+        'icon': "Jay1",
+        'geo': 'jay_home'
+      },
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '19',
+        'minute': '30',
+        'duration': '[Approximate Time]',
+        'body': 'Jay and Adnan return to the Park and Ride to retrieve Hae\'s car. They drive around the area. Adnan is driving Hae\'s car, Jay is driving Adnan\'s car.',
+        'icon': "Jay1",
+        'geo': 'park_ride'
+      },
+    ],
+    '20': [
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '20',
+        'minute': '15',
+        'duration': '[Time Unknown]',
+        'body': 'Adnan and Jay arrive at Leakin Park, and Adnan buries Hae?s body in the woods. Jay says it takes Adnan about a half an hour.',
+        'icon': "Jay1",
+        'geo': 'park_ride'
+      },
+    ],
+    '21': [
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '21',
+        'minute': '00',
+        'duration': '[Time Unknown]',
+        'body': 'Adnan and Jay leave Leakin Park and drive around some more, until finally ditching Hae?s car in a residential lot.',
+        'icon': "Jay1",
+        'geo': 'hae_car'
+      },
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '21',
+        'minute': '30',
+        'duration': '[Time Unknown]',
+        'body': 'Adnan throws Hae\'s things and the shovel into a dumpster at Westview Mall.',
+        'icon': "Jay1",
+        'geo': 'shopping_center'
+      }
+    ],
+    '22': [
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '22',
+        'minute': '00',
+        'duration': '[Time Unknown]',
+        'body': 'Adnan and Jay go to 7-Eleven.',
+        'icon': "Jay1",
+        'geo': 'shopping_center'
+      },
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '22',
+        'minute': '30',
+        'duration': '[Time Unknown]',
+        'body': 'Adnan drops Jay off at home.',
+        'icon': "Jay1",
+        'geo': 'jay_home'
+      }
+    ],
+    '23': [
+      {
+        'title': 'Jay\'s First Interview',
+        'hour': '23',
+        'minute': '00',
+        'duration': '[Time Unknown]',
+        'body': 'Jay tells Jenn that Adnan killed Hae.',
+        'icon': "Jay1",
+        'geo': 'jay_home'
+      }
+    ]
+  }
+
+};
+
+return [calls, adnan, jay1, jay2, jay3, nothing];
 });

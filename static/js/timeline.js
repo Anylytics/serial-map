@@ -16,7 +16,7 @@ require([ 'ractive', 'rv!../ractive/timeline', 'storydata', 'serial', 'sidebar']
         hourNames: [ '0','...','7','8','9','10','11','12','13', '14', '15', '16', '17', '18','19','20','21','22','23','24'],
         date: "13/01/99",
         selectedStories: undefined,
-        storyOptions: ["Calls", "Adnan's Story", "Jay's 2nd Interview", "Jay's Testimonial", "Nothing"],
+        storyOptions: ["Calls", "Adnan's Story", "Jay's 1st Interview", "Jay's 2nd Interview", "Jay's Testimonial", "Nothing"],
         selectedHour: -100,
         percentage: function ( minutes ) {
             return (minutes/60.0 * 100) - 5;
@@ -43,14 +43,8 @@ require([ 'ractive', 'rv!../ractive/timeline', 'storydata', 'serial', 'sidebar']
         }
       },
     });
-    /*var adnanStory = story_d[1]["13/01/99"];
-    var tempCalls = story_d[0]["13/01/99"];
-    var jay3 = story_d[3]["13/01/99"];
 
-    timelineRactive.set({
-        stories: [tempCalls, adnanStory, jay3]
-    });*/
-    timelineRactive.set("selectedStories", [4,2,3]);
+    timelineRactive.set("selectedStories", [0,1,4]);
 
     timelineRactive.on( 'activate', function( event, hourName )  {
         var stories = timelineRactive.get("stories");
