@@ -133,11 +133,11 @@ a:hover {
 #rightPanel {
 	position:fixed;
 	right:1.5%;
-	top:2.5%;
+	top:1.5%;
 	padding:10px;
 	width:20%;
 	min-width:200px;
-	height:80%;
+	height:calc(97% - 130px);;
 	overflow:auto;
 }
 
@@ -217,6 +217,7 @@ h1 {
 
 .listings .item:hover {
   background-color:white;
+  margin-left:10px;
 }
 
 .listings .item:last-child { border-bottom:none; }
@@ -255,7 +256,7 @@ h1 {
 
 .timelineContainer {
 	position:fixed;
-	bottom: 40px;
+	bottom: 1.5%;
 	width:97%;
 	margin-left: 1.5%;
 	height:120px;
@@ -311,7 +312,6 @@ h1 {
     text-align:center;
 }
 
-<<<<<<< HEAD
 #mobileHide {
 	position:fixed;
 	top:0;
@@ -333,10 +333,7 @@ h1 {
 	right:20px;
 }
 
-.hourcolumn:hover {
-=======
 .hourcolumn:hover, .selected {
->>>>>>> origin/feature-ractive
 	background-color:whitesmoke;
 }
 
