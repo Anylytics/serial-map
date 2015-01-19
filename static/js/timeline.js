@@ -15,8 +15,8 @@ require([ 'ractive', 'rv!../ractive/timeline', 'storydata', 'serial', 'sidebar']
       data: {
         hourNames: [ '0','...','7','8','9','10','11','12','13', '14', '15', '16', '17', '18','19','20','21','22','23','24'],
         date: "13/01/99",
-        selectedStories: undefined,
-        storyOptions: ["Calls", "Adnan's Story", "Jay's 2nd Interview", "Jay's Testimonial", "Nothing"],
+        selectedStories: [0, 1, 2],
+        storyOptions: ["Calls", "Adnan's Story", "Nothing"],
         selectedHour: -100,
         percentage: function ( minutes ) {
             return (minutes/60.0 * 100) - 5;
@@ -43,14 +43,13 @@ require([ 'ractive', 'rv!../ractive/timeline', 'storydata', 'serial', 'sidebar']
         }
       },
     });
-    /*var adnanStory = story_d[1]["13/01/99"];
+    var adnanStory = story_d[1]["13/01/99"];
     var tempCalls = story_d[0]["13/01/99"];
-    var jay3 = story_d[3]["13/01/99"];
+    var nothing = story_d[2]["13/01/99"];
 
     timelineRactive.set({
-        stories: [tempCalls, adnanStory, jay3]
-    });*/
-    timelineRactive.set("selectedStories", [4,2,3]);
+        stories: [tempCalls, adnanStory, nothing]
+    });
 
     timelineRactive.on( 'activate', function( event, hourName )  {
         var stories = timelineRactive.get("stories");
@@ -81,10 +80,36 @@ require([ 'ractive', 'rv!../ractive/timeline', 'storydata', 'serial', 'sidebar']
         timelineRactive.set({
             stories: [story1,story2,story3]
         });
-        var selectedHour = timelineRactive.get("selectedHour");
-        timelineRactive.fire('activate', undefined, selectedHour);
     });
-
+    /*
+    timelineRactive.on( 'activate', function( event, mapID ) {
+        var id = mapID;
+        if (mapID.slice(-1) == 'A' || mapID.slice(-1) == 'B' || mapID.slice(-1) == 'C' )
+        {
+            id = mapID.slice(0,-1);
+        }
+        for (var key in mapdictionary)
+        {
+            var locale = mapdictionary[key];
+            locale.setIcon(L.icon({
+                iconUrl: '/static/img/cellTower.png',
+                iconSize: [21.5, 32.5],
+                iconAnchor: [0, 0],
+                popupAnchor: [0, 0]
+            }));
+        }
+        if (id in mapdictionary)
+        {
+            var locale = mapdictionary[id];
+            locale.setIcon(L.icon({
+                iconUrl: '/static/img/cellActive.png',
+                iconSize: [21.5, 32.5],
+                iconAnchor: [0, 0],
+                popupAnchor: [0, 0]
+            }));
+        }
+    });
+    */
 
 
 });

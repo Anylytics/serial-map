@@ -32,7 +32,7 @@ require([ 'ractive', 'rv!../ractive/uibuttons', "jquery", "jqueryui"], function 
         });
 
 
-         $( ".draggable" ).draggable({ cursor: "move", axis: "x",
+         $( ".draggableTimeline" ).draggable({ cursor: "move", axis: "x",
                 stop: function(event, ui) {
                     if ($(this).position().left>0) {
                         //alert("return");

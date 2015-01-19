@@ -217,8 +217,9 @@ h1 {
 
 .itemicon {
     position: relative;
-    top: 5px;
-    right: 5px;
+    top: 0px;
+    right: -25px;
+    float:right;
 }
 
 .listings .item:hover {
@@ -228,6 +229,7 @@ h1 {
 
 .listings .selected {
   background-color:white;
+  margin-left:10px;
 }
 
 .listings .item:last-child { border-bottom:none; }
@@ -305,6 +307,7 @@ h1 {
 #timelinewrapper {
     width: 30000px;
     height: inherit;
+    left:-1200px;
 }
 
 .stackable {
