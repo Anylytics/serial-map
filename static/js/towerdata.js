@@ -223,6 +223,14 @@ var geojson = [   {   'features': [   {   'geometry': {   'coordinates': [   -76
                                               'icon': 'house',
                                               'name': 'patrick_home',
                                               'title': "Patrick's House"},
+                            'type': 'Feature'},
+                        {   'geometry': {   'coordinates': [   -76.753329,
+                                                               39.288148],
+                                            'type': 'Point'},
+                            'properties': {   'city': 'Cantonsville',
+                                              'icon': 'marker',
+                                              'name': 'gilston',
+                                              'title': "Gilston Park"},
                             'type': 'Feature'}
 
 

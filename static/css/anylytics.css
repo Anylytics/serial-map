@@ -133,10 +133,11 @@ a:hover {
 #rightPanel {
 	position:fixed;
 	right:1.5%;
-	top:2.5%;
+	top:1.5%;
 	padding:10px;
 	width:20%;
-	height:80%;
+	min-width:200px;
+	height:calc(97% - 130px);;
 	overflow:auto;
 }
 
@@ -152,7 +153,8 @@ a:hover {
 
 #listings2 {
 	height:40%;
-	overflow:auto;
+	overflow-x:hidden;
+    overflow-y: auto;
 }
 
 #listings {
@@ -202,6 +204,7 @@ h1 {
   display:block;
   width:90%;
   margin-left:5%;
+  margin-right: 5%;
   //border:1px solid #eee;
   padding:10px;
   text-decoration:none;
@@ -216,16 +219,20 @@ h1 {
 
 .itemicon {
     position: relative;
-    top: 5px;
-    right: 5px;
+    top: 0px;
+    height: 25px;
+    right: -20px;
+    float:right;
 }
 
 .listings .item:hover {
   background-color:white;
+  margin-left:10px;
 }
 
 .listings .selected {
   background-color:white;
+  margin-left:10px;
 }
 
 .listings .item:last-child { border-bottom:none; }
@@ -264,7 +271,7 @@ h1 {
 
 .timelineContainer {
 	position:fixed;
-	bottom: 40px;
+	bottom: 1.5%;
 	width:97%;
 	margin-left: 1.5%;
 	height:120px;
@@ -303,6 +310,11 @@ h1 {
 #timelinewrapper {
     width: 30000px;
     height: inherit;
+    left:-1200px;
+}
+
+.dropdown {
+    width: 90%;
 }
 
 .stackable {
@@ -318,6 +330,27 @@ h1 {
     width: 200px;
     height: inherit;
     text-align:center;
+}
+
+#mobileHide {
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background:url(/static/img/whitesmoke.png);
+	z-index: 2000;
+}
+
+#mobileText {
+	padding:10%;
+	background-color:whitesmoke;
+}
+
+#xbutt {
+	position:absolute;
+	top:20px;
+	right:20px;
 }
 
 .hourcolumn:hover, .selected {

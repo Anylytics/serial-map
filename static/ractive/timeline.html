@@ -2,7 +2,7 @@
 <div id="leftLabels">
     {{#selectedStories:i}}
         <div class="stackable leftTitles">
-            <select value={{selectedStories[i]}}>
+            <select class="dropdown" value={{selectedStories[i]}}>
                 {{#storyOptions:j}}
                     <option value="{{j}}" {{selectedStories[i] === j ? 'selected' : '' }} >{{this}}</option>
                 {{/storyOptions}}
@@ -12,7 +12,7 @@
     <div class="stackable leftTitles">Time</div>
 </div>
 <div id = "rightContent" >
-    <div id = "timelinewrapper" class="draggable">
+    <div id = "timelinewrapper" class="draggableTimeline">
      {{#hourNames:i}}
         <div class="hourcolumn {{ isselected(this,selectedHour) ? 'selected' : '' }}" on-click='activate:{{this}}'>
             {{#stories}}

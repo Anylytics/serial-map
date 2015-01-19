@@ -63,7 +63,7 @@ var adnan =
         'hour': '12',
         'minute': '50',
         'duration': '12:50pm - 1:27pm',
-        'body': 'Psychology Class has started. Adnan is late due to getting a recommendation letter',
+        'body': 'Psychology Class has started. Adnan is getting a recommendation letter from another teacher.',
         'icon': "Adnan",
         'geo': 'highschool'
       }
@@ -95,7 +95,7 @@ var adnan =
         'title': 'Adnan\'s Story',
         'hour': '15',
         'minute': '30',
-        'duration': '3:30pm to 4:30pm or 5:00pm ',
+        'duration': '',
         'body': 'Track Practice. Track coach Michael Sye testified that practice was usually from 4:00 to 5:30 or 6:00 p.m.',
         'icon': "Adnan",
         'geo': 'highschool'
@@ -548,7 +548,7 @@ var jay3 = {
         'duration': '',
         'body': 'Jay doesn’t hear from Adnan, so he leaves Jenn\’s house to go to his friend Jeff\’s.',
         'icon': "Jay3",
-        'geo': 'jeff_home'
+        'geo': 'jenn_home'
       },
       {
         'title': 'Jay\'s Testimonial (Second Trial)',
@@ -832,8 +832,8 @@ var jay2 =
         'title': 'Jay\'s 2nd Interview',
         'hour': '12',
         'minute': '55',
-        'duration': '[Approximate Time] 12:55pm',
-        'body': 'Jay goes to Jenn’s house and plays video games with her brother. Approximately five minutes after dropping Adnan at home',
+        'duration': '[Approximate Time]',
+        'body': 'Jay goes to Jenn’s house and plays video games with her brother.',
         'icon': "jay2",
         'geo': 'jenn_home'
       }
@@ -1005,16 +1005,18 @@ var jay2 =
       {
         'title': 'Jay\'s 2nd Interview',
         'hour': '19',
-        'minute': '05',
+        'minute': '15',
         'duration': '[Time Unknown]',
         'body': 'Adnan and Jay arrive at Leakin Park and bury Hae’s body in the woods.',
         'icon': "jay2",
         'geo': 'death_site'
-      },
+      }
+    ],
+    '20': [
       {
         'title': 'Jay\'s 2nd Interview',
-        'hour': '19',
-        'minute': '25',
+        'hour': '20',
+        'minute': '00',
         'duration': '[Time Unknown]',
         'body': 'Adnan and Jay drive around for 30 minutes until finally ditching Hae’s car in a residential lot.',
         'icon': "jay2",
@@ -1022,8 +1024,8 @@ var jay2 =
       },
       {
         'title': 'Jay\'s 2nd Interview',
-        'hour': '19',
-        'minute': '40',
+        'hour': '20',
+        'minute': '15',
         'duration': '[Time Unknown]',
         'body': 'Adnan throws Hae’s things and the shovels into a dumpster at Westview Mall.',
         'icon': "jay2",
@@ -1031,18 +1033,18 @@ var jay2 =
       },
       {
         'title': 'Jay\'s 2nd Interview',
-        'hour': '19',
-        'minute': '50',
+        'hour': '20',
+        'minute': '45',
         'duration': '[Time Unknown]',
         'body': 'Adnan drops Jay off at home.',
         'icon': "jay2",
         'geo': 'jay_home'
       }
     ],
-    '20': [
+    '21': [
       {
         'title': 'Jay\'s 2nd Interview',
-        'hour': '20',
+        'hour': '21',
         'minute': '10',
         'duration': '[Time Unknown]',
         'body': 'Jenn picks Jay up and he tells her that Adnan killed Hae. She takes him to the F&M and he throws his clothes in a dumpster. Then they go back to the dumpster at Westview Mall and he wipes his fingerprints off the shovels. Jenn told the detectives that she took Jay to throw his clothes out the next day',
@@ -1051,7 +1053,7 @@ var jay2 =
       },
       {
         'title': 'Jay\'s 2nd Interview',
-        'hour': '20',
+        'hour': '21',
         'minute': '30',
         'duration': '[Time Unknown]',
         'body': 'Jay goes to see Stephanie. Then Jenn and Jay go back to “Cathy’s” for the rest of the evening until Jay goes home.',

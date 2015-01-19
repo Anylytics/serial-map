@@ -1,4 +1,4 @@
-require([ 'ractive', 'rv!../ractive/uibuttons', "jquery", "jqueryui"], function ( Ractive, template, jquery, jquerymin) {
+define([ 'ractive', 'rv!../ractive/uibuttons', "jquery", "jqueryui", "timeline"], function ( Ractive, template, jquery, jquerymin, timeline) {
 
         $( "#legendButton" ).click(function() {
             if ($( "#legend" ).hasClass( "offScreen" )) {
@@ -31,7 +31,8 @@ require([ 'ractive', 'rv!../ractive/uibuttons', "jquery", "jqueryui"], function 
             }
         });
 
-         $( ".draggable" ).draggable({ cursor: "move", axis: "x",
+
+         $( ".draggableTimeline" ).draggable({ cursor: "move", axis: "x",
                 stop: function(event, ui) {
                     if ($(this).position().left>0) {
                         //alert("return");

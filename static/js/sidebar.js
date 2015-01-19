@@ -1,5 +1,5 @@
 // Now we've configured RequireJS, we can load our dependencies and start
-define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Ractive, template, mapdictionary) {
+define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Ractive, template, mapdictionary, jquery) {
 
     function clone(orig) {
         var latlng = {}
@@ -18,10 +18,13 @@ define([ 'ractive', 'rv!../ractive/sidebar', 'serial', 'jquery'], function ( Rac
         welcome: true,
         selectedStory: undefined,
         time: function ( hour, minute ) {
-            if (hour>12){
-                hour=hour-12;
+            if (hour>=12){
+                if (hour>12)
+                    hour=hour-12;
                 return hour + ":"+ minute+ "pm";
             } else {
+                if (hour == 0)
+                    hour = 12;
                 return hour + ":" + minute + "am";
             }
         }

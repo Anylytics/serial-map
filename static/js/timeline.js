@@ -1,5 +1,5 @@
 // Now we've configured RequireJS, we can load our dependencies and start
-require([ 'ractive', 'rv!../ractive/timeline', 'storydata', 'serial', 'sidebar'], function ( Ractive, template, story_d, mapdictionary, sidebarRactive) {
+define([ 'ractive', 'rv!../ractive/timeline', 'storydata', 'serial', 'sidebar'], function ( Ractive, template, story_d, mapdictionary, sidebarRactive) {
 
     function compare(a,b) {
       if (a.minute < b.minute)
@@ -80,5 +80,5 @@ require([ 'ractive', 'rv!../ractive/timeline', 'storydata', 'serial', 'sidebar']
     });
 
 
-
+    return timelineRactive;
 });
