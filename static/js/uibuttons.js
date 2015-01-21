@@ -1,5 +1,8 @@
 define([ 'ractive', 'rv!../ractive/uibuttons', "jquery", "jqueryui", "timeline"], function ( Ractive, template, jquery, jquerymin, timeline) {
 
+        require(["touchpunch"],function(touchpunch){
+        
+//For Desktop Version
         $( "#legendButton" ).click(function() {
             if ($( "#legend" ).hasClass( "offScreen" )) {
                 $( "#legend" ).removeClass("offScreen animated fadeOutLeft");
@@ -30,7 +33,39 @@ define([ 'ractive', 'rv!../ractive/uibuttons', "jquery", "jqueryui", "timeline"]
                 $( "#rightPanel" ).addClass("animated fadeOutRight").delay(1000).addClass("offScreen");
             }
         });
+//For Mobile
+$( "#legendButtonMobile" ).click(function() {
+            if ($( "#legendMobile" ).hasClass( "offScreen" )) {
+                $( "#legendMobile" ).removeClass("offScreen animated fadeOutLeft");
+                $( "#legendMobile" ).addClass("animated fadeInLeft");
+            } else {
+                $( "#legendMobile" ).removeClass("animated fadeInLeft");
+                $( "#legendMobile" ).addClass("animated fadeOutLeft").delay(1000).addClass("offScreen");
+            }
+        });
 
+
+        $( "#timeButtonMobile" ).click(function() {
+            if ($( "#timelineContainer" ).hasClass( "offScreen" )) {
+                $( "#timelineContainer" ).removeClass("offScreen animated fadeOutDown");
+                $( "#timelineContainer" ).addClass("animated fadeInUp");
+            } else {
+                $( "#timelineContainer" ).removeClass("animated fadeInUp");
+                $( "#timelineContainer" ).addClass("animated fadeOutDown").delay(1000).addClass("offScreen");
+            }
+        });
+
+        $( "#storyButtonMobile" ).click(function() {
+            if ($( "#rightPanelMobile" ).hasClass( "offScreen" )) {
+                $( "#rightPanelMobile" ).removeClass("offScreen animated fadeOutRight");
+                $( "#rightPanelMobile" ).addClass("animated fadeInRight");
+            } else {
+                $( "#rightPanelMobile" ).removeClass("animated fadeInRight");
+                $( "#rightPanelMobile" ).addClass("animated fadeOutRight").delay(1000).addClass("offScreen");
+            }
+        });
+
+//Draggable Timeline
 
          $( ".draggableTimeline" ).draggable({ cursor: "move", axis: "x",
                 stop: function(event, ui) {
@@ -43,6 +78,8 @@ define([ 'ractive', 'rv!../ractive/uibuttons', "jquery", "jqueryui", "timeline"]
                     }
                 }
             });
+     });
+        
 
 
 });

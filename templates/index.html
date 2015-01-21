@@ -14,11 +14,11 @@
 
 </head>
 <body>
-    <div class="visible-xs" id="mobileHide">
+    <!--<div class="visible-xs" id="mobileHide">
         <h1 id="mobileText">:(</h1>
         <h3 id="mobileText">We apologize for the inconvenience - this application is not yet ready for mobile! <br><br>Please come back soon or visit on a PC for a full experience. </h3>
-       <!-- <img id="xbutt" src="static/img/x.png"/>-->
-    </div>
+       <!-- <img id="xbutt" src="static/img/x.png"/>
+    </div>-->
     <div id='head' class="animated fadeInDown">
         <!--<nav class="navbar navbar-default navbar-fixed-top">
               <div class="container">
@@ -38,24 +38,27 @@
             <a class="navbar-brand hidden-xs  animated fadeInDown" href="http://anylytics.io"><img id="logo" src="./static/img/anylytics_logo.png"/></a>
             <a class="navbar-brand visible-xs-inline animated fadeInDown"  href="http://anylytics.io"><img id="logoxs" src="./static/img/anylytics_small_logo.png"/></a>
 
-            <a class="navbar-brand" href="#"><img id="legendButton" class="headButton" src="./static/img/legendIcon.png"/></a>
-            <a class="navbar-brand" href="#"><img id="timeButton" class="headButton" src="./static/img/time.png"/></a>
-            <a class="navbar-brand" href="#"><img id="storyButton" class="headButton" src="./static/img/stories.png"/></a>
+            <a class="navbar-brand hidden-xs" href="#"><img id="legendButton" class="headButton" src="./static/img/legendIcon.png"/></a>
+            <a class="navbar-brand hidden-xs" href="#"><img id="timeButton" class="headButton" src="./static/img/time.png"/></a>
+            <a class="navbar-brand hidden-xs" href="#"><img id="storyButton" class="headButton" src="./static/img/stories.png"/></a>
+            <a class="navbar-brand visible-xs" href="#"><img id="legendButtonMobile" class="headButton" src="./static/img/legendIcon.png"/></a>
+            <a class="navbar-brand visible-xs" href="#"><img id="timeButtonMobile" class="headButton" src="./static/img/time.png"/></a>
+            <a class="navbar-brand visible-xs" href="#"><img id="storyButtonMobile" class="headButton" src="./static/img/stories.png"/></a>
 
     </div>
 
     <div id='mainarea'>
         <div id='map'> </div>
 
-        <div id='rightPanel' class='sidebar floatPanel'>
+        <div id='rightPanel'>
         </div>
 
-        <div class="floatPanel animated fadeInLeft" id="legend">
+        <div class="floatPanel animated fadeInLeft hidden-xs" id="legend">
             <img id="legendImg" src="./static/img/legend.png">
 
         </div>
 
-        <div id="timelineContainer" class="timelineContainer floatPanel animated fadeInUp">
+        <div id="timelineContainer">
             <!-- Ractive Will Fill This In -->
         </div>
 

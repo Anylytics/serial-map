@@ -1,35 +1,73 @@
-
-<div id="leftLabels">
-    {{#selectedStories:i}}
-        <div class="stackable leftTitles">
-            <select class="dropdown" value={{selectedStories[i]}}>
-                {{#storyOptions:j}}
-                    <option value="{{j}}" {{selectedStories[i] === j ? 'selected' : '' }} >{{this}}</option>
-                {{/storyOptions}}
-            </select>
-        </div>
-    {{/selectedStories}}
-    <div class="stackable leftTitles">Time</div>
-</div>
-<div id = "rightContent" >
-    <div id = "timelinewrapper" class="draggableTimeline">
-     {{#hourNames:i}}
-        <div class="hourcolumn {{ isselected(this,selectedHour) ? 'selected' : '' }}" on-click='activate:{{this}}'>
-            {{#stories}}
-                 <div class="stackable">
-                 {{ #this[hourNames[i]] }}
-                        <div class="timeElement">
-                            <div class="eventContainer" style="z-index:{{hour}}{{minute}}; left:{{percentage(minute)}}%;">
-                                <img class="eventIcon" src="./static/img/{{icon}}.png"/>
-                            </div>
-                        </div>
-                 {{/calls}}
-                </div>
-            {{/stories}}
-            <div class="stackable">
-                {{time(this)}}
+<div class="timelineContainer floatPanel hidden-xs">
+    <div id="leftLabels">
+        {{#selectedStories:i}}
+            <div class="stackable leftTitles">
+                <select class="dropdown" value={{selectedStories[i]}}>
+                    {{#storyOptions:j}}
+                        <option value="{{j}}" {{selectedStories[i] === j ? 'selected' : '' }} >{{this}}</option>
+                    {{/storyOptions}}
+                </select>
             </div>
-        </div>
-     {{/hourNames}}
-     </div>
+        {{/selectedStories}}
+        <div class="stackable leftTitles">Time</div>
+    </div>
+    <div id = "rightContent" >
+        <div id = "timelinewrapper" class="draggableTimeline">
+         {{#hourNames:i}}
+            <div class="hourcolumn {{ isselected(this,selectedHour) ? 'selected' : '' }}" on-click='activate:{{this}}'>
+                {{#stories}}
+                     <div class="stackable">
+                     {{ #this[hourNames[i]] }}
+                            <div class="timeElement">
+                                <div class="eventContainer" style="z-index:{{hour}}{{minute}}; left:{{percentage(minute)}}%;">
+                                    <img class="eventIcon" src="./static/img/{{icon}}.png"/>
+                                </div>
+                            </div>
+                     {{/calls}}
+                    </div>
+                {{/stories}}
+                <div class="stackable">
+                    {{time(this)}}
+                </div>
+            </div>
+         {{/hourNames}}
+         </div>
+    </div>
+</div>
+
+<div class="timelineContainerMobile floatPanelMobile visible-xs">
+    <div id="leftLabels">
+        {{#selectedStories:i}}
+            <div class="stackable leftTitles">
+                <select class="dropdown" value={{selectedStories[i]}}>
+                    {{#storyOptions:j}}
+                        <option value="{{j}}" {{selectedStories[i] === j ? 'selected' : '' }} >{{this}}</option>
+                    {{/storyOptions}}
+                </select>
+            </div>
+        {{/selectedStories}}
+        <div class="stackable leftTitles">Time</div>
+    </div>
+    <div id = "rightContent" >
+        <div id = "timelinewrapper" class="draggableTimeline">
+         {{#hourNames:i}}
+            <div class="hourcolumn {{ isselected(this,selectedHour) ? 'selected' : '' }}" on-click='activate:{{this}}'>
+                {{#stories}}
+                     <div class="stackable">
+                     {{ #this[hourNames[i]] }}
+                            <div class="timeElement">
+                                <div class="eventContainer" style="z-index:{{hour}}{{minute}}; left:{{percentage(minute)}}%;">
+                                    <img class="eventIcon" src="./static/img/{{icon}}.png"/>
+                                </div>
+                            </div>
+                     {{/calls}}
+                    </div>
+                {{/stories}}
+                <div class="stackable">
+                    {{time(this)}}
+                </div>
+            </div>
+         {{/hourNames}}
+         </div>
+    </div>
 </div>
